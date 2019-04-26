@@ -1,0 +1,45 @@
+<!--components/list/list.wxml-->
+<wxs src="./list.wxs" module="tools" />
+<!-- 优惠券列表内容展示 -->
+<block wx:for="{{listContent}}" wx:key="key">
+    <view class='voucher'>
+        <!--背景图-->
+        <!--couponType01 代金券 couponType03 优惠券 couponType04 礼品券-->
+        <image class='bg' wx:if="{{item.couponType==01}}" src="../../images/coupon/q_02.png" mode="aspectFit"></image>
+        <image class='bg' wx:elif="{{item.couponType==03}}" src="../../images/coupon/q_01.png" mode="aspectFit"></image>
+        <image class='bg' wx:else="{{item.couponType==04}}" src="../../images/coupon/q_03.png" mode="aspectFit"></image>
+        <!--角标-->
+        <image class="title" wx:if="{{item.couponType==01}}" src="../../images/coupon/mark_02.png" mode="aspectFit"></image>
+        <image class="title" wx:elif="{{item.couponType==03}}" src="../../images/coupon/mark_01.png" mode="aspectFit"></image>
+        <image class="title" wx:else="{{item.couponType==04}}" src="../../images/coupon/mark_03.png" mode="aspectFit"></image>
+        <view class='voucherContainer'>
+            <view class='voucherLeft'>
+                <image class='' src="{{item.img}}" mode='aspectFit'></image>
+            </view>
+            <view class='voucherCenter'>
+                <view class='foodName'>{{item.couponTitle}}</view>
+                <view class='voucherTag'>
+                    全天可用
+                </view>
+                <view class='voucherTime'>{{tools.convertTime(item.startTime)}}-{{tools.convertTime(item.endTime)}}</view>
+            </view>
+            <view class='voucherRight flex-y-center m30' bindtap='receiveCardListPage' data-cardId="{{item.cardId}}"  wx:if="{{item.cardId==cardId}}">
+                <text class='f50'>￥{{item.couponPrice}}</text>
+                <text class='desTitle' wx:if="{{item.couponType==01}}">{{item.subTitle}}</text>
+                <text class='delete desTitle' wx:else>原价 ￥{{item.originalPrice}}</text>
+                <image class='userBtn' wx:if="{{item.couponType==01}}" src="../../images/card/btn_04.png"></image>
+                <image class='userBtn' wx:elif="{{item.couponType==03}}" src="../../images/card/btn_04.png"></image>
+                <image class='userBtn' wx:else="{{item.couponType==04}}" src="../../images/card/btn_04.png"></image>  
+            </view>
+
+            <view class='voucherRight flex-y-center m30' bindtap='couponCollectionPage' data-cardId="{{item.cardId}}" wx:else>
+                <text class='f50'>￥{{item.couponPrice}}</text>
+                <text class='desTitle' wx:if="{{item.couponType==01}}">{{item.subTitle}}</text>
+                <text class='delete desTitle' wx:else>原价 ￥{{item.originalPrice}}</text>
+                <image class='userBtn' wx:if="{{item.couponType==01}}" src="../../images/card/btn_02.png"></image>
+                <image class='userBtn' wx:elif="{{item.couponType==03}}" src="../../images/card/btn_01.png"></image>
+                <image class='userBtn' wx:else="{{item.couponType==04}}" src="../../images/card/btn_03.png"></image>  
+            </view>
+        </view>
+    </view>
+</block>

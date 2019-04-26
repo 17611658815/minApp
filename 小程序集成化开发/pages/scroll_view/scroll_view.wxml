@@ -1,0 +1,13 @@
+<view class="container">
+    <scroll-view class="content" scroll-into-view="{{toView}}" scroll-y="true" scroll-with-animation="true">
+        <view wx:for='{{act_addList}}'>
+            <view style='color:red' class='flop' data-pid="{{item.region}}" id="{{'toView'+item.region}}">{{item.region}}</view>
+            <view wx:for='{{item.keys}}' >{{item.keyword}}</view>
+        </view>
+        <view></view>
+    </scroll-view>
+    <view class='orientation_region'>
+        <view wx:for='{{act_addList}}' data-index='{{index}}' data-id="{{item.region}}" bindtap='scrollToViewFn'>
+            {{item.region}}</view>
+    </view>
+</view>

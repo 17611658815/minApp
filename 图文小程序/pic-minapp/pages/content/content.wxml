@@ -1,0 +1,50 @@
+<scroll-view scroll-y="true" class="content" bindscrolltolower="pullUpLoad">
+  <view class='container'>
+
+    <view class='imgBox' style='height:100%;background: url({{picMsg.background}}) repeat-y;background-size:100% auto'>
+      <view class='psBox'>
+        <rich-text style='font-family:黑体, SimHei;font-size:48rpx;color:red;' nodes="{{picMsg.content}}"></rich-text>
+      </view>
+    </view>
+ <button class='transpond btn_on' animation="{{animationData}}" catchtap='onShareAppMessage' open-type='share' wx:if="{{picMsg.content != undefined}}">
+  <image src='../../images/shere.png'></image> 分享好友</button>
+    <view class='recommend' wx:if="{{picMsg.content != undefined}}">
+      <view class='recommend_title'>相关推荐</view>
+      <view class='recommendBox'>
+        <view class='recommend_list' 
+              data-title='{{item.short_title}}' 
+              data-id='{{item.id}}' 
+              bindtap='recommendation' 
+              wx:for="{{list}}">
+            <image src='{{item.thumb}}'></image>
+            <view class='biaoti'>{{item.title}}</view>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+</scroll-view>
+<view class='hint' wx:if="{{isShow}}">凝聚温情传递祝福</view>
+<!-- 分享按钮 -->
+<view class='fxBox'>
+  <button class='btn1' bindtap='goindex'>
+    <image src='../../images/sy.png'></image> 返回首页</button>
+  <view class='borders'></view>
+  <button class='btn2' catchtap='onShareAppMessage' open-type='share'>
+    <image src='../../images/wx.png'></image> 分享好友</button>
+</view>
+<!-- 背景音乐 -->
+
+<!-- <audio src="{{picMsg.mp3}}" id="myAudio" bindtimeupdate="updata"></audio> -->
+
+<image 
+    class='muicPic1 {{isRotate ? "music_on":""}}'
+    bindtap='audioPause' wx:if="{{!isPlay && picMsg.mp3!=''}}" 
+    src='../../images/meuic.jpg'>
+</image>
+<image 
+    class='muicPic' 
+    bindtap='listenerButtonPlay' 
+    wx:if="{{isPlay}}" 
+    src='../../images/meuic.jpg'>
+</image>

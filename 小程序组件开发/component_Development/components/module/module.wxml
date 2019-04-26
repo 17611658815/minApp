@@ -1,0 +1,3 @@
+<view class='contBox' bindtap='search' animation="{{animation}}">
+   {{msg}}
+</view>

@@ -1,0 +1,28 @@
+<!-- 呼吸动画 -->
+<view>
+  <button class='transpond btn_on' animation="{{animationData}}" catchtap='onShareAppMessage' open-type='share'>
+    分享好友</button>
+</view>
+<!-- 旋转颜色渐变 -->
+<view bindtap='set' class='animation_box'>
+  <view class='animation_box_1'></view>
+</view>
+<view bindtap='set2' class='animation_box'>
+  <view class='animation_box_1'></view>
+</view>
+<!-- 顶部滑入动画 -->
+<button bindtap='translate'>点击滑入</button>
+<view class='view' animation="{{animation}}" bindtap='translate2'></view>
+
+<!-- 下拉动画 -->
+<view>
+  <view> 下拉菜单</view>
+  <button id="slide" bindtap="toggle">下拉菜单</button>
+  <view id="box" class="{{first_click?'show':'hide'}} {{state?'open':'close'}}">
+    <view id="item_list">
+      <view>111</view>
+      <view>222</view>
+      <view>333</view>
+    </view>
+  </view>
+</view>

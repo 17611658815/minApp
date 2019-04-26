@@ -1,0 +1,5 @@
+/* template/module.wxss */
+view{
+  text-align: center;
+  border-bottom: 1rpx solid #d1d1d1;
+}

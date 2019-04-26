@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container">
+  <button  bindtap='clicks'>提交</button>
+  <view class='showod' wx:if="{{show}}">
+    <button bindtap='shut'>关闭</button>
+  </view>
+</view>
+
+<button bindtap='search' wx:if='{{!array[0].scend}}'>查找</button>
+<button bindtap='Distinct'>去重</button>
+
+
+<view style="width:{{100}}px;height:{{ full ? scorllHeight-100-75+'px' :'auto'}};background:red"></view>
+
+<!-- <view class='voucher' bindtap='addCount'>
+  <image class='bg' src='../../images/q_02.png'></image>
+  <image class='title' src='../../images/mark_02.png'></image>
+  <view class='voucher_container'>
+    <view class='voucher_left'>
+       <image src='../../images/icon03.png'></image>
+    </view>
+    <view class='voucher_center'>
+       <view class='voucher_name'>冰淇淋代金券</view>
+       <view class='voucher_icon'>全天可用</view>
+       <view class='voucher_time'>2018/11/11-2018/12/11</view>
+    </view>
+    <view class='voucher_right'>
+     <view class='voucher_money'>￥10.0</view>
+       <view class='voucher_pric'>满30-10</view>
+       <view class='voucher_use'>立即使用</view>
+    </view>
+  </view>
+</view> -->

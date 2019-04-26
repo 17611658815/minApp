@@ -1,0 +1,17 @@
+<movable-area>
+    <movable-view
+        style="width: {{ movableViewWidth }}px; height: {{ movableViewHeight }}px;"
+        direction="all" x="{{ movableViewX }}" y="{{ movableViewY }}"
+        animation="{{ false }}"
+        bindchange="movableItemChange">
+        <image src="/assets/cat.png" mode="widthFix" class="cat"></image>
+
+        <view class="scale-item"
+            catchtouchstart="scaleItemTouchStart"
+            catchtouchmove="scaleItemTouchMove"
+            catchtouchend="scaleItemTouchEnd"
+            data-index="{{ index }}">
+            <image src="/assets/scale.png" class="scale-icon"></image>
+        </view>
+    </movable-view>
+</movable-area>

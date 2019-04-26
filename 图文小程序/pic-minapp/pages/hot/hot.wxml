@@ -1,0 +1,30 @@
+<scroll-view scroll-y="true" class="content" bindscrolltolower="pullUpLoad">
+  <view class='container'>
+    <!-- list列表 -->
+    <view class='allList'>
+      <view class='picCover' 
+            data-title='{{item.short_title}}' 
+            data-id="{{item.id}}" 
+            wx:for='{{slider}}' 
+            catchtap='gocontent'>
+        <image class='cover' src='{{item.thumb}}'></image>
+        <view class='title'>
+          <view>
+            {{item.short_title}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<!-- 自定义导航 -->
+<!-- <view class='navTab'>
+  <view class='foot_tab' bindtap='goindex'>
+    <image src='../../images/icon_1.png'></image>
+    <view>最新</view>
+  </view>
+  <view class='foot_tab active'>
+    <image src='../../images/icon_4.png'></image>
+    <view>热门</view>
+  </view>
+</view> -->

@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  
+<button bindtap='fn'>滑动</button>
+</view>
+
+
+
+
+<module msg="{{motto}}" wx:if="{{!showsaerch}}" bind:myevent="onMyEvent" id='module'></module> -->
+
+
+<!-- <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" controls="{{controls}}" circles="{{circles}}" polyline="{{polyline}}" bindregionchange="regionChange" bindcontroltap='controlClick' style="width: 100%; height:300px;"></map>
+<button type='primary' bindtap='locationClick'>获取当前位置</button>
+<button type='primary' bindtap='selectedClick'>选择位置</button>
+<button type='primary' bindtap='lineClick'>导航路线</button> -->
+
+<import src="../../template/templates.wxml" />
+<calendar  
+  show-more-days="false"
+  weeks-type="cn"
+  days-color="{{demo1_days_style}}"
+  lunar ="true"
+  binddayClick="clicks"
+  cell-size="40"
+  />
+  <template is="module" data="{{arr}}"></template>
+

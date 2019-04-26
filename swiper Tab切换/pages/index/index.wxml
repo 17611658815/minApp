@@ -1,0 +1,31 @@
+<!-- <view class='container'>
+  <view class='switchTab'>
+    <view wx:for='{{arr}}' class='{{currentTab == index ? "active" : ""}}' data-current='{{index}}' bindtap='swichNav' wx:key='key'>{{item}}</view>
+  </view>
+  <swiper current='{{currentTab}}' duration="300" style="height:{{winHeight}}px;" bindchange="bindChange">
+    <swiper-item>
+      全部
+    </swiper-item>
+    <swiper-item>
+      审核中
+    </swiper-item>
+    <swiper-item>
+      未通过
+    </swiper-item>
+    <swiper-item>
+      已通过
+    </swiper-item>
+  </swiper>
+</view> -->
+
+<view class='container'>
+  <button bindtap='startRecording'>开始录音</button>
+  <button bindtap='pauseRecording'>暂停录音</button>
+  <button bindtap='resumeRecording'>继续录音</button>
+  <button bindtap='stopRecording'>结束录音</button>
+  <view>
+    <view>时长：{{audioMsg.duration}}</view>
+    <view>文件大小：{{audioMsg.fileSize}}</view>
+    <view>临时路径：{{audioMsg.tempFilePath}}</view>
+  </view>
+</view>

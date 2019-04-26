@@ -1,0 +1,52 @@
+/* template/cardbar/cardbar.wxss */
+@import '../../app.wxss';
+
+.cardBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    background-color: #fff!important;
+    height: 88rpx;
+    color: #000;
+    font-size: 38rpx;
+    padding-top: 40rpx;
+    font-weight: bold;
+    letter-spacing: 2rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.child {
+  flex: 1;
+}
+
+.navTitle {
+  text-align: center;
+}
+
+.arrowNav {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-left: 30rpx;
+  color: #000;
+  border-top: 4rpx solid;
+  border-left: 4rpx solid;
+  width: 24rpx;
+  height: 24rpx;
+  transform: rotate(-45deg);
+}
+
+.arrowBox {
+  width: 80rpx;
+  height: 60rpx;
+  padding: 20rpx 50rpx 20rpx 0;
+}
+
+.heightView {
+  background: transparent;
+  height: 128rpx;
+}

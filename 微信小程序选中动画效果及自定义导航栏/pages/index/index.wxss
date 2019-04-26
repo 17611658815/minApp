@@ -1,0 +1,40 @@
+/**index.wxss**/
+.isiphone{
+    margin-top: 220rpx;
+}
+.noiphone{
+    margin-top: 115rpx;
+}
+.taberBox{
+  width: 100%;
+  display: flex;
+}
+.taberBox .taberBox_1{
+   flex: 1;
+   height: 100rpx;
+   /* border: 1rpx solid red; */
+   text-align: center;
+   position: relative;
+}
+.border{
+ content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1rpx;
+  width: 0;
+  height: 10rpx;
+  background: red;
+  transition: all .3s;
+}
+
+.borderhover{
+  content: "";
+    width: 100%;
+    height: 10rpx;
+     bottom: -1rpx;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: red;
+    transition: all .3s;
+}

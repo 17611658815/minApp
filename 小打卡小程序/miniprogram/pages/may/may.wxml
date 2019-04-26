@@ -1,0 +1,5 @@
+
+ <button bindtap='aa'>上传压缩图片</button>
+<canvas canvas-id='photo_canvas'></canvas>
+<!-- <image src='{{imgUrl}}'></image> -->
+<image bindload="getImg" src=''></image> 

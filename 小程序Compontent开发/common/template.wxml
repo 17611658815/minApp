@@ -1,0 +1,5 @@
+<template name="modules">
+     <view wx:for='{{Array}}' bindtap='onclick' wx:key='key'>
+         {{item}}
+     </view>
+</template>

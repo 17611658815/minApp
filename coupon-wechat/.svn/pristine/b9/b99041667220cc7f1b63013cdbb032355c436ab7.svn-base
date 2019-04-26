@@ -1,0 +1,25 @@
+<!--pages/receiveCoupon/receiveCoupon.wxml-->
+<import src="../../template/cardbar/cardbar.wxml" />
+<template is="cardbar" data="{{navTitle: '限时尝鲜'}}" wx:if="{{title==0}}"></template>
+<template is="cardbar" data="{{navTitle: '超级经典'}}" wx:elif="{{title==1}}"></template>
+<template is="cardbar" data="{{navTitle: '时段优惠'}}" wx:else="{{title==2}}"></template>
+<view class='receiveCouponPage'>
+ <image class='homeBg' src="../../images/card/homepage_banner.png" mode="aspectFit"></image>
+   <scroll-view class='' scroll-y="true"  style="height:1500rpx" bindscrolltolower="searchScrollLower" bindchange="swiperTab">
+      <view class='couponMargin'>
+      <block wx:if="{{title==0}}">
+        <list list-content="{{churchFoodOne}}" get-code="{{getCode}}" card-id="{{cardId}}"></list>
+      </block> 
+      <block wx:if="{{title==1}}">
+        <list list-content="{{churchFoodTwo}}"></list>
+      </block>
+      <block wx:if="{{title==2}}">
+        <list list-content="{{churchFoodThree}}"></list>
+      </block>
+      </view>
+    <view class='footerBox'>
+      <image class='' src="../../images/coupon/icon_05.png" mode='aspectFit'></image>
+      <view class="noMore" bindtap='findMoreBtn'>没有更多券了</view>
+    </view>
+  </scroll-view>
+</view>

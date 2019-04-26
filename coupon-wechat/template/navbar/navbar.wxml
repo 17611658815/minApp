@@ -1,0 +1,30 @@
+<template name="navbar">
+  <!-- <view class="nav flex-x">
+    <view class="child">
+      <view class="arrowBox" bindtap='tabClick'>
+        <text class="arrowNav"></text>
+      </view>
+    </view>
+    <text class="child navTitle">{{navTitle}}</text>
+    <view class="child"></view>
+  </view> -->
+  <navigator wx:if="{{shareBack}}" url="/pages/index/index" class="nav flex-x"  hover-class="none" style="background-color:{{transparent?'transparent':bgColor?bgColor:''}}">
+    <view class="child">
+      <view class="arrowBox" >
+        <text class="arrowNav"></text>
+      </view>
+    </view>
+    <text class="child navTitle">{{navTitle}}</text>
+    <view class="child"></view>
+  </navigator>
+  <navigator wx:else class="nav flex-x" open-type="navigateBack" delta="1" hover-class="none" style="background-color:{{transparent?'transparent':bgColor?bgColor:''}}">
+    <view class="child">
+      <view class="arrowBox">
+        <text class="arrowNav"></text>
+      </view>
+    </view>
+    <text class="child navTitle">{{navTitle}}</text>
+    <view class="child"></view>
+  </navigator>
+  <view wx:if="{{!transparent}}" class='heightView'></view>
+</template>

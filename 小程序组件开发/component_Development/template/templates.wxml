@@ -1,0 +1,5 @@
+<template name='module'>
+    <view wx:for="{{arr}}">
+        {{item}}
+    </view>
+</template>

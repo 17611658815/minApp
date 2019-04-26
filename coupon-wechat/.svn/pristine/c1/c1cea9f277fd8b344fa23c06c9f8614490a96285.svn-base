@@ -1,0 +1,48 @@
+<!--pages/coupon/coupon.wxml-->
+<!--引入自定义头部模板-->
+<import src="../../template/navbar/navbar.wxml" />
+<template is="navbar" data="{{navTitle: '我的卡包'}}"></template>
+
+<view class='couponPage'>
+  <!-- 优惠券tab页头部展示 -->
+  <view class='couponHeader flex-x'>
+    <view class='switchTab'>
+      <view  wx:for="{{tabList}}" wx:key="{{index}}" catchtap='switchTab' data-index='{{index}}'>
+        <view class='flex-y-center badgeBox'>
+            <label class='badgeCount {{switchTab==index?"bgActive":""}}'>{{num}}</label>
+            <image class="tabIcon" src="{{item.src}}"></image>
+            {{item.text}}
+        </view>
+        <view class='{{switchTab==index?"active":""}}' data-index="{{index}}"></view>
+      </view>
+    </view>
+  </view>
+
+  <!--新版-->
+  <scroll-view class='couponContent' scroll-y="true" current="{{switchTab}}" style="height:1500rpx" bindscrolltolower="searchScrollLower" bindchange="swiperTab">
+    <block wx:if="{{switchTab == 0}}">
+      <view class='couponMargin'>
+        <list list-content="{{churchFood}}"></list>
+      </view>
+    </block>
+    <block wx:if="{{switchTab == 1}}">
+      <view class='couponMargin'>
+        <list list-content="{{churchFood}}"></list>
+      </view>
+    </block>
+    <block wx:if="{{switchTab == 2}}">
+      <view class='couponMargin'>
+        <list list-content="{{churchFood}}"></list>
+      </view>
+    </block>
+    <block wx:if="{{switchTab == 3}}">
+      <view class='couponMargin'>
+        <list list-content="{{churchFood}}"></list>
+      </view>
+    </block>
+    <view class='footerBox'>
+      <image class='' src="../../images/coupon/icon_05.png" mode='aspectFit'></image>
+      <view class="findMore" bindtap='findMoreBtn'>查看更多历史</view>
+    </view>
+  </scroll-view>
+</view>

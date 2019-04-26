@@ -1,0 +1,6 @@
+<!--pages/turnTable/turnTable.wxml-->
+<import src="../../template/cardbar/cardbar.wxml" />
+<template is="cardbar" data="{{navTitle: '优惠券领取'}}"></template>
+<view class='turnTablePage'>
+转盘
+</view>

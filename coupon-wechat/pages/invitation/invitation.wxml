@@ -1,0 +1,11 @@
+<!--pages/invitation/invitation.wxml-->
+
+<!--引入自定义头部模板-->
+<import src="../../template/navbar/navbar.wxml" />
+<template is="navbar" data="{{transparent: true}}"></template>
+
+<view class='flex-y-center wrap'>
+  <image class='banner' src='../../images/activity/collage02.png'></image>
+  <view class='text gray'>分享给微信好友，邀请满3个好友得优惠券</view>
+  <image class='btn' src='../../images/activity/btn02.png'></image>
+</view>

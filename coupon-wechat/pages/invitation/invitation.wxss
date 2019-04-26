@@ -1,0 +1,22 @@
+/* pages/invitation/invitation.wxss */
+
+.wrap{
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.banner{
+  width: 750rpx;
+  height: 943rpx;
+}
+
+.text{
+  font-size: 26rpx;
+  margin: 45rpx 0;
+}
+
+.btn{
+  width: 499rpx;
+  height: 95rpx;
+}

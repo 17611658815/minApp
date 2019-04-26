@@ -1,0 +1,13 @@
+<!--template/cardbar/cardbar.wxml-->
+<template name="cardbar">
+    <navigator class='cardBox flex-x' open-type='navigateBack' delta='1' hover-class="none">
+        <view class="child">
+            <view class="arrowBox">
+                <text class="arrowNav"></text>
+            </view>
+        </view>
+        <text class="child navTitle">{{navTitle}}</text>
+        <view class="child"></view>
+    </navigator>
+    <view wx:if="{{!transparent}}" class='heightView'></view>
+</template>

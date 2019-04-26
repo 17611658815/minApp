@@ -1,0 +1,60 @@
+<scroll-view scroll-y="{{true}}" class="content" bindscrolltolower="pullUpLoad">
+  <view class='container'>
+
+    <view class="swiper-container">
+      <view class='timer'>
+        <view>{{date}}</view>
+        <view>
+          <view wx:if="{{month == 11}}">November</view>
+          <view wx:if="{{month == 12}}">December</view>
+          <view wx:if="{{month == 1}}"> January</view>
+          <view wx:if="{{month == 2}}"> February</view>
+          <view wx:if="{{month == 3}}"> March </view>
+          <view wx:if="{{month == 4}}"> April </view>
+          <view wx:if="{{month == 5}}"> May </view> 
+          <view wx:if="{{month == 6}}"> June </view>
+          <view wx:if="{{month == 7}}"> July </view>
+          <view wx:if="{{month == 8}}"> August </view>
+          <view wx:if="{{month == 9}}"> September </view>
+          <view wx:if="{{month == 10}}">October </view>
+          <view>{{time}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- list列表 -->
+    <view class='allList'>
+      <view class='picCover'
+            wx:for='{{slider}}' 
+            data-title='{{item.short_title}}' 
+            data-id='{{item.id}}' 
+            catchtap='gocontent'>
+        <image class='cover' src='{{item.thumb}}'></image>
+        <view class='title' wx:if="{{item.short_title !='' && item.title!=''}}">
+          <view>
+            {{item.short_title}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- loading -->
+  <view class='loadingStyle' style="display:{{isHide}};">加载中...</view>
+</scroll-view>
+
+<!-- 自定义导航 -->
+<!-- <view class='navTab'>
+  <view class='foot_tab active'>
+    <image src='../../images/icon_2.png'></image>
+    <view>最新</view>
+  </view>
+  <view class='foot_tab' bindtap='gohotList'>
+    <image src='../../images/icon_3.png'></image>
+    <view>热门</view>
+  </view>
+</view> -->
+<view class='up' catchtap='upList' wx:if="{{slider}}">
+  <image src='../../images/sync.png'></image>
+  <view>换</view>
+  <view>一</view>
+  <view>批</view>
+</view>

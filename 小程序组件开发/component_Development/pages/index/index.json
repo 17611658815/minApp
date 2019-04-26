@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "module": "/components/module/module",
+    "calendar": "plugin://calendar/calendar"
+  }
+ 
+}

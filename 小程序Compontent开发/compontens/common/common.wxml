@@ -1,0 +1,7 @@
+<view class='container'>
+  <!-- 添加插槽 -->
+  <slot name="before"></slot> 
+  <view bindtap="onTap" data-msg='{{item}}' data-index='{{index}}' wx:for='{{msg}}' wx:key='key'>{{item}}</view>
+  <!-- 添加插槽 -->
+  <slot name="after"></slot>
+</view>

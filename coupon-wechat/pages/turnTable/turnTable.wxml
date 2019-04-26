@@ -1,0 +1,15 @@
+<!--pages/turnTable/turnTable.wxml-->
+
+<!--引入自定义头部模板-->
+<import src="../../template/cardbar/cardbar.wxml" />
+<template is="cardbar" data="{{navTitle: '惊喜转盘'}}"></template>
+
+<view class='turnTablePage'>
+  <image class='image_bg' src='../../images/card/zhuanpan_bg.png'></image>
+  <view class='pointer'>
+    <image animation="{{animationData}}" class='pointer main' src='../../images/card/zhuanpan_02.png'></image>
+    <image class='pointer deputy' src='../../images/card/zhuanpan_01.png'></image>
+  </view>
+  <text class='tag'>活动规则</text>
+  <button class='btn' bindtap="start">您还有一次抽奖机会</button>
+</view>

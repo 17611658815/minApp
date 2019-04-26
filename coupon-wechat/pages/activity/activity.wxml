@@ -1,0 +1,86 @@
+<!--pages/activity/activity.wxml-->
+
+<!--引入自定义头部模板-->
+<import src="../../template/navbar/navbar.wxml" />
+<template is="navbar" data="{{...item}}"></template>
+
+<view class='main flex-y'>
+  <image class='banner' src='../../images/activity/collage01.png'></image>
+  <!-- <image class='banner' src='{{activity.bg}}'></image> -->
+  <view class='flex-x title'>
+    <view>
+      <view style='font-size:42rpx;'>
+        {{activity.name}}
+        <!-- <text class='yellow'>10</text> 元新品套餐 -->
+      </view>
+      <view class='smallText gray'>活动时间：{{activity.during}}</view>
+    </view>
+    <view class='smallText gray rulesBtn' bindtap="openMask">
+      <!-- <view> -->
+      <text>活动规则</text>
+      <text class='arrowRight'></text>
+      <!-- </view> -->
+    </view>
+  </view>
+
+  <view class='goods'>
+    <view class='subTitle'>{{activity.finish?"拼团成功！":"快来抢新品吧！"}}</view>
+    <view class='goodsBox'>
+      <view class='goodItem' wx:for="{{goodsList}}" wx:key="index">
+        <view wx:if="{{!index}}" class='flag'>新</view>
+        <image src='{{item.prizeImg}}'></image>
+        <view class='goodName'>{{item.prizeName}}</view>
+        <!-- <view>
+          <text class='goodPrice red'>¥ {{item.price}}</text>
+          <text class='goodOldPrice gray'>¥ {{item.oldPrice}}</text>
+        </view> -->
+      </view>
+    </view>
+  </view>
+  <!-- 未开团 -->
+  <view class='bottom' wx:if='{{!activity.users.length}}'>
+    <view class='share gray'>
+      <text>分享到微信群邀请{{goodsList.length-1}}个好友</text>
+    </view>
+    <view class='start'>
+      <button class="btn" bindgetuserinfo='joinGroup' open-type="getUserInfo">点击立即开团</button>
+    </view>
+  </view>
+  <!-- 已开团 -->
+  <view class='bottom' wx:else>
+    <view wx:if="{{!activity.finish}}" class='share gray'>
+      <text>还差{{goodsList.length-activity.users.length}}人即可成功，邀请好友一起拼团吧</text>
+    </view>
+    <view class='start flex-x'>
+      <view class="headImgs flex-x">
+        <image src="" wx:for="{{activity.users}}" wx:key="index" class='{{!activity.finish?"userLogo":"userLogo bigLogo"}}' src="{{item}}"></image>
+        <view class="userLogo void" wx:for="{{goodsList.length-activity.users.length}}" wx:key="index" wx:for-item='item'>?</view>
+      </view>
+      <view wx:if="{{!activity.finish}}">
+        <button wx:if='{{activity.join}}' class="btn invite" open-type="share">邀请好友拼团</button>
+        <button wx:else class="btn invite" bindgetuserinfo='joinGroup' open-type="getUserInfo">立即参团</button>
+      </view>
+      <view wx:else>
+      <navigator url="/pages/coupon/coupon" hover-class="none">
+        <button class="btn invite">查看卡券</button>
+      </navigator>
+      </view>
+    </view>
+  </view>
+  <!-- 活动规则 -->
+  <view class='commonMask' wx:if="{{showMask}}">
+    <view class='alertContent'>
+      <view class='alertList'>
+        <view class='content'>
+          <view class='alertTitle flex center' bindtap='closeMask'>
+            <text class='flex-grow'>充值说明</text>
+            <image class='' src="../../images/home/close.png"></image>
+          </view>
+          <view class='desc'>
+            {{desc}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

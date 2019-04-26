@@ -1,0 +1,24 @@
+<view class='container' hidden='{{canshow2}}'>
+  <canvas style='width:{{canvasWidth}}px; height:{{canvasHeight}}px' class="canvas3" id="canvas3" canvas-id="canvas3" disable-scroll="true">
+  </canvas>
+   <canvas style='width:{{canvasWidth}}px; height:{{canvasHeight}}px' class="canvas3" id="canvas4" canvas-id="canvas4" disable-scroll="true">
+  </canvas>
+  <canvas style='width:{{canvasWidth}}px; height:{{canvasHeight}}px' class="canvas2" id="canvas2" canvas-id="canvas2" disable-scroll="true">
+  </canvas>
+  <view class='buttonBox'>
+   <button  bindtap='addname'>签字</button>
+    <button bindtap='clickMe2' class='addbutton' open-type="getuserinfo">保存</button>
+
+  </view>
+</view>
+
+<view class='nameBox' hidden='{{canshow}}'>
+  <canvas class="canvas" id="canvas" canvas-id="canvas" disable-scroll="true" bindtouchstart="canvasStart" bindtouchmove="canvasMove" bindtouchend="canvasEnd" touchcancel="canvasEnd" binderror="canvasIdErrorCallback">
+
+  </canvas>
+  <view class='buttonBox'>
+    <button bindtap='clickMe'>确认</button>
+    <button bindtap='cleardraw'>重写</button>
+  </view>
+  <!-- <button bindtap='clickMe'>保存图片</button> -->
+</view>

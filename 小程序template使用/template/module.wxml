@@ -1,0 +1,5 @@
+<template name="modules">
+     <view wx:for='{{arr}}' bindtap='alertIndex' data-index='{{index}}'>
+         {{item}}
+     </view>
+</template>

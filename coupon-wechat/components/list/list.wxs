@@ -1,0 +1,6 @@
+module.exports = {
+    convertTime:function(item) {
+        return item.slice(0,10)
+    }
+}
+

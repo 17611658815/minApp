@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "限时尝鲜",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "list": "/components/list/list"
+  }
+}

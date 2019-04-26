@@ -1,0 +1,7 @@
+<!--pages/wxcharts/wxcharts.wxml-->
+<canvas canvas-id="pieCanvas" disable-scroll="true" class="canvas"></canvas>
+<canvas canvas-id="ringCanvas" disable-scroll="true" class="canvas canvas2"></canvas>
+<canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas"></canvas>
+<canvas canvas-id="columnCanvas" disable-scroll="true" class="canvas"></canvas>
+<canvas canvas-id="areaCanvas" disable-scroll="true" class="canvas"></canvas>
+<canvas canvas-id="radarCanvas" disable-scroll="true" class="canvas canvas2"></canvas>

@@ -1,0 +1,7 @@
+#canvas_posters{
+  position: fixed;
+  top: 0;
+  left: 999px;
+  width:600rpx;
+  height:1000rpx;
+}

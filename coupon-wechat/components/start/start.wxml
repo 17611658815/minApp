@@ -1,0 +1,12 @@
+<!--components/start/start.wxml-->
+<view class='startPage'>
+    <!-- 新人一键注册内容展示 -->
+    <form>
+      <view class='startContent'>
+          <image class='' src="../../images/wechat_login.png"></image>
+          <view class="title">微信一键注册</view>
+          <view class='desc'>登录后可查看钱包余额、优惠券、积分等</view>
+      </view>
+      <button class='loginBtn' open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber">注册</button>
+    </form>
+</view>

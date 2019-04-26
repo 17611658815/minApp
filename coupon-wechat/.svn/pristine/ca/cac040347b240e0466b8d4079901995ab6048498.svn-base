@@ -1,0 +1,3 @@
+/* pages/turnTable/turnTable.wxss */
+@import '../../app.wxss'; 
+@import '../../template/cardbar/cardbar.wxss';

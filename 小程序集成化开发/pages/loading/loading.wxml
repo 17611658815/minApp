@@ -1,0 +1,2 @@
+<import src="../../templates/loading/loading.wxml"></import>
+<template is="loading" data></template> 

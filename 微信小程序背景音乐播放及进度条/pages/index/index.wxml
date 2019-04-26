@@ -1,0 +1,76 @@
+<!--  
+<view class='audiosBox' wx:for='{{audioList}}'>
+
+    <view class="audioOpen" bindtap="listenerButtonPause" data-src='{{item.src}}' data-index='{{index}}' wx:if="{{item.isplay}}" >
+      暂停
+    </view>
+    <view class="audioOpen" bindtap="listenerButtonPlay" data-src='{{item.src}}' data-index='{{index}}' wx:else>
+      开始
+    </view>
+    <view class='slid' wx:if='{{item.isplay}}'>
+      <slider bindchange="sliderChange"  block-size="12px" step="1" value="{{offset}}" max="{{max}}" selected-color="#4c9dee" />
+      <view class='tit'>amy的音频
+      <text>总时长:{{ "0" + (((item.duration)/60)|Int)}}:{{(item.duration)%60<10 ? "0"+((item.duration)%60) : ((item.duration)%60)}}</text>
+      </view>
+      <view>
+        <text class='times'>{{starttime}}</text> 
+      </view>
+    </view>
+    <view class='slid' wx:elif='{{item.isplay&&!Intheplay}}'>
+      <slider bindchange="sliderChange"  block-size="12px" step="1" value="{{offset}}" max="{{max}}" selected-color="#4c9dee" />
+      <view class='tit'>amy的音频
+      <text>总时长:{{ "0" + (((item.duration)/60)|Int)}}:{{(item.duration)%60<10 ? "0"+((item.duration)%60) : ((item.duration)%60)}}</text>
+      </view>
+      <view>
+        <text class='times'>{{starttime}}</text> 
+      </view>
+    </view>
+    <view class='slid' wx:else>
+      <slider selected-color="#4c9dee" block-size="12px"  max="{{max}}" />
+      <view class='tit'>amy的音频
+      <text>总时长:{{ "0" + (((item.duration)/60)|Int)}}:{{(item.duration)%60<10 ? "0"+((item.duration)%60) : ((item.duration)%60)}}</text>
+      </view>
+      <view>
+        <text class='times'>00:00</text> 
+      </view>
+    </view>
+</view> -->
+
+
+
+
+<!-- <view class='container' hidden='{{canshow2}}'>
+ <canvas style='width:{{canvasWidth}}px; height:{{canvasHeight}}px' class="canvas2" id="canvas2" canvas-id="canvas2" disable-scroll="true">
+  </canvas>
+   
+  <canvas style='width:{{canvasWidth}}px; height:{{canvasHeight}}px' class="canvas3" id="canvas3" canvas-id="canvas3" disable-scroll="true">
+  </canvas>
+   <canvas style='width:{{canvasWidth}}px; height:{{canvasHeight}}px' class="canvas3" id="canvas4" canvas-id="canvas4" disable-scroll="true">
+    <button class='sign' style='position: absolute;top:{{top}};left:{{left}};' wx:if='{{signShow}}' bindtap='addname'>签字</button>
+  </canvas>
+  
+  
+ 
+  <view class='buttonBox'>
+  
+    <button bindtap='clickMe2' class='addbutton' open-type="getuserinfo">生成合同</button>
+
+  </view>
+</view>
+
+<view class='nameBox' hidden='{{canshow}}'>
+  <canvas class="canvas" id="canvas" canvas-id="canvas" disable-scroll="true" bindtouchstart="canvasStart" bindtouchmove="canvasMove" bindtouchend="canvasEnd" touchcancel="canvasEnd" binderror="canvasIdErrorCallback">
+
+  </canvas>
+  <view class='buttonBox'>
+    <button bindtap='clickMe'>确认</button>
+    <button bindtap='cleardraw'>重写</button>
+  </view>
+</view> -->
+
+
+<button catchtap='startRecording'>开始录音</button>
+<button catchtap='resumeRecording' >继续录音</button>
+<button catchtap='pauseRecording'>暂停录音</button>
+<button bindtap="stopRecording">完成录音</button>
+<view>{{minute}}:{{second}}</view>

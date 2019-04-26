@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "functional-page-navigator": "plugin://myPlugin/list"
+  }
+}

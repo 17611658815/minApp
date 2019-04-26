@@ -1,0 +1,112 @@
+/**app.wxss**/
+
+/**全局样式**/
+@import "./template/navbar/navbar.wxss";
+
+/*自定义头部导航*/
+
+page {
+    background: #eee;
+    color: #333;
+    font-size: 32rpx;
+    height: 100%;
+}
+
+button::after {
+    border: 0;
+}
+
+.container {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+/** flex布局 **/
+
+.flex {
+    display: flex;
+}
+
+/** 换行 **/
+.flex-wrap {
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+/** 横向布局 **/
+
+.flex-x {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/** 纵向布局 **/
+
+.flex-y {
+    display: flex;
+    flex-direction: column;
+}
+
+/** 纵向居中布局 **/
+
+.flex-y-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/** 弹性盒子内容 **/
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+/** 水平垂直都居中 **/
+
+.align-center {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center; /*x轴对齐方式*/
+    align-items: center; /*y轴对齐方式*/
+}
+
+/** 居中布局 **/
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.db {
+    display: inline-block;
+}
+
+.delete {
+    text-decoration:line-through;
+}
+
+.couponIcon {
+    width: 100rpx;
+    height: 100rpx;
+    margin-right: 25rpx
+}

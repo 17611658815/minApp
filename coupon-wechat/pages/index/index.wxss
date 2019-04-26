@@ -1,0 +1,201 @@
+/**index.wxss**/
+@import '../../app.wxss'; 
+@import '../../template/cardbar/cardbar.wxss';
+/**优惠券领取样式**/
+.topBg {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-bottom: 80rpx;
+}
+
+.homeBg {
+    width: 750rpx;
+    height: 396rpx;
+}
+
+.goodsPart {
+    position: absolute;
+    bottom: -60rpx;
+    left: 40rpx;
+    width: 90%;
+    height: 150rpx;
+    z-index: 999;
+    background-color: #fff;
+    border-radius: 10rpx;
+    color: #333;
+    font-size: 24rpx;
+}
+
+.goodsIcon {
+    width: 59rpx;
+    height: 59rpx;
+    margin-bottom: 10rpx;
+}
+
+.cardPartBox {
+    margin: 20rpx 40rpx;
+}
+
+.commonBg {
+    height: auto;
+    background-color: #fff;
+    border-radius: 10rpx;
+    color: #333;
+    font-size: 28rpx;
+}
+
+.m25 {
+    margin-bottom: 10rpx
+}
+
+.titleBox {
+    padding: 0 0 20rpx;
+    border-bottom: 2rpx solid #eee;
+}
+
+.fireIcon {
+    width: 25rpx;
+    height: 31rpx;
+    margin-left: 15rpx;
+}
+
+.titleBox text {
+    font-size: 31rpx;
+    font-weight: bold;
+}
+
+.titleBox .more {
+    color: #656565;
+    font-size: 26rpx;
+}
+
+.cardPicBox {
+    padding: 24rpx 25rpx;
+}
+
+.change {
+    padding-top: 25rpx;
+}
+
+.changeBg {
+    position: relative;
+    display: flex;
+    width: 276rpx;
+    height: 186rpx;
+    margin-bottom: 10rpx;
+}
+
+.changeBg .bg {
+    width: 100%;
+    height: 100%;
+}
+
+.changeContanier {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.changeLeft {
+    flex: 0.6;
+    height: 80%;
+    margin-left: 20rpx;
+}
+
+.changeRight {
+    flex: 1;
+    height: 80%;
+    margin-right: 20rpx;
+    position: absolute;
+    top: 16rpx;
+    right: 8rpx;
+    z-index: 999;  
+}
+
+.name {
+    height: 80rpx;
+    font-weight: bold;
+    text-indent: 10rpx;
+    font-size: 32rpx;
+    text-align: center;
+}
+
+.price {
+    width: 113rpx;
+    text-align: center;
+    font-size: 22rpx;
+}
+
+.f62 {
+    font-size: 62rpx;
+}
+
+.orange {
+    color:#d95b00;
+}
+
+.pink {
+    color:#d80349; 
+}
+
+.blue {
+    color:#0b7ad0; 
+}
+
+.miao {
+    text-shadow:1px 1px 0px #ffe0e8, -1px -1px 0px #ffe0e8, 2px 2px 0px #ffe0e8, -2px -2px 0px #ffe0e8, 3px 3px 0px #ffe0e8, -3px -3px 0px #ffe0e8;
+    /* -webkit-text-fill-color: #d80349;
+   -webkit-text-stroke-width:1rpx;
+   -webkit-text-stroke-color:#ffe0e8; */
+}
+
+/**超级经典**/
+.changeLeftSpecial {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  flex: 1.3;
+  height: 80%;
+}
+
+.changeRightSpecial {
+  position: absolute;
+  top: 15rpx;
+  right: 26rpx;
+  z-index: 999;
+  flex: 1;
+  height: 80%;
+}
+
+.foodIcon {
+    width: 138rpx;
+    height: 138rpx;
+}
+
+.drinkIcon {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 165rpx;
+    height: 165rpx;
+    margin-left: 15rpx;
+    z-index: 99;
+}
+
+.br {
+    margin: 20rpx 0;
+    border-right: 2rpx solid #eee;
+}
+
+.br:last-child {
+    border-right: none;
+}

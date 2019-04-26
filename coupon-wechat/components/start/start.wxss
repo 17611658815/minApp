@@ -1,0 +1,53 @@
+/* components/start/start.wxss */
+page {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+
+.userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
+
+.userinfo-nickname {
+    color: #aaa;
+}
+
+.startContent {
+    margin: 250rpx auto 50rpx;
+    text-align: center;
+}
+
+.startContent image {
+    width: 307rpx;
+    height: 203rpx;
+    margin-bottom: 50rpx;
+}
+
+.startContent .title{
+    font-size: 36rpx;
+    padding: 10rpx 0;
+    font-weight: bold;
+}
+
+.startContent .desc{
+    color: #888;
+    font-size: 28rpx;
+}
+
+.loginBtn {
+    width: 60%;
+    height: 85rpx;
+    line-height: 85rpx;
+    border-radius: 40rpx;
+    background-color: #51b0ff;
+    text-align: center;
+    font-size: 32rpx;
+    color: #fff;
+}

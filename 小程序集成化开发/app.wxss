@@ -1,0 +1,8 @@
+/**app.wxss**/
+/* 
+    引入全局样式
+ */
+@import 'css/global.wxss';
+@import "templates/loading/loading.wxss";
+
+

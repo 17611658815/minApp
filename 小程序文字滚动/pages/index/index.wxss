@@ -1,0 +1,34 @@
+
+/* 效果一 */
+.swiper_container {
+  background-color: red;
+  height: 50rpx;
+  width: 80vw;
+  line-height: 50rpx;
+}
+
+.swiper_item {
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 效果二 */
+.example {
+  display: block;
+  width: 100%;
+  
+}
+.marquee_box {
+  width: 100%;
+  position: relative;
+}
+.marquee_text {
+  background: yellow;
+  
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+}
+

@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<button bindtap='alert1'>弹窗1</button>
+<button bindtap='alert2'>弹窗2</button>
+<button bindtap='alert3'>弹窗3</button>
+<button bindtap='alert4'>弹窗4</button>
+<button bindtap='alert5'>弹窗5</button>
+<button bindtap='alert6'>弹窗6</button>
+<button bindtap='alert7'>弹窗7</button>

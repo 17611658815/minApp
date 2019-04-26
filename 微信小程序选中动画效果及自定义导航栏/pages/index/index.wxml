@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="container {{iphonex == true ?'isiphone':'noiphone'}}" >
+   <!-- <view class='taberBox'>
+     <view class='taberBox_1' bindtap='tabs' data-index='{{index}}' wx:for='{{taber}}'>
+       <view class='name'>{{item}}</view>
+       <view class='{{tab == index ? "borderhover":"border"}}' ></view>
+     </view>
+   </view> -->
+   <button bindtap='gopage1'>去page1</button>
+</view> 

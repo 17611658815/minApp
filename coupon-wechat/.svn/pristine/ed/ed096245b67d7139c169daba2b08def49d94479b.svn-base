@@ -1,0 +1,194 @@
+<!--index.wxml-->
+<import src="../../template/cardbar/cardbar.wxml" />
+<template is="cardbar" data="{{navTitle: '优惠券领取'}}"></template>
+
+<view class='cardContanier'>
+    <view class='topBg'>
+        <image class='homeBg' src="../../images/card/homepage_banner.png"></image>
+        <view class='goodsPart flex-x'>
+            <view class='align-center br' wx:for="{{service}}" wx:for-item="item" wx:key="index" bindtap='servicePage' data-path="{{item.path}}">
+                <image class="goodsIcon" src="{{item.pic}}"></image>
+                <text>{{item.text}}</text>
+            </view>
+        </view>
+    </view>
+    <!--内容-->
+    <view class='cardPartBox'>
+        <!-- 限时尝鲜 -->
+        <view class='commonBg cardPicBox m25'>
+            <view class='titleBox flex-x' catchtap='lookMore' data-title="0">
+                <view class='center'>
+                    <text>限时尝鲜</text>
+                    <image class='fireIcon' src="../../images/card/homepage_icon_04.png"></image>
+                </view>
+                <view class='more'>查看更多
+                    <label>>></label>
+                </view>
+            </view>
+            <view class='change flex-x flex-wrap'>
+                <view class='flex-y-center' wx:for="{{showFreshRec}}" wx:key="key">
+                    <view class='changeBg'>
+                        <image class='bg' src="../../images/card/homepage_quan_01.png" mode="aspectFit" wx:if="{{item.couponType==01}}"></image>
+                        <image class='bg' src="../../images/card/homepage_quan_02.png" mode="aspectFit" wx:elif="{{item.couponType==02}}"></image>
+                        <image class='bg' src="../../images/card/homepage_quan_03.png" mode="aspectFit" wx:else="{{item.couponType==03}}"></image>
+                        <view class='changeContanier'>
+                            <view class='changeLeft'>
+                                <image class="drinkIcon" src="{{item.img}}" mode='aspectFit' wx:if="{{item.couponType==03}}"></image>
+                                <image class="foodIcon" src="{{item.img}}" mode='aspectFit' wx:else></image>
+                            </view>
+                            <view class='changeRightSpecial flex-y-center' wx:if="{{item.couponType==01}}">
+                                <view class='flex-row m25'>
+                                    <view class='name blue'>
+                                        <text class='f62'>{{item.price}}</text>元
+                                    </view>
+                                </view>
+                                <view class='price blue'>
+                                    <text class='f22 delete'>原价￥{{item.oldPrice}}</text>
+                                </view>
+                            </view>
+                            <view class='changeRightSpecial flex-y-center' wx:elif="{{item.couponType==02}}">
+                                <view class='flex-row m25'>
+                                    <view class='name orange'>
+                                        <text class='f62'>{{item.price}}</text>元
+                                    </view>
+                                </view>
+                                <view class='price orange'>
+                                   <text class='f22'>{{item.title}}</text>
+                                </view>
+                            </view>
+                            <view class='changeRight flex-y-center' wx:elif="{{item.couponType==03}}">
+                                <view class='flex-row m25'>
+                                    <view class='name pink'>
+                                        <text class='f62 miao'>{{item.price}}</text>元
+                                    </view>
+                                </view>
+                                <view class='price pink'>
+                                    <text class='f22 delete'>原价￥{{item.oldPrice}}</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view>{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+        <!-- 超值套餐 -->
+        <view class='commonBg cardPicBox m25'>
+            <view class='titleBox flex-x' catchtap='lookMore' data-title="1">
+                <view class='center'>
+                    <text>超值经典</text>
+                    <image class='fireIcon' src="../../images/card/homepage_icon_04.png"></image>
+                </view>
+                <view class='more'>查看更多
+                    <label>>></label>
+                </view>
+            </view>
+            <view class='change flex-x flex-wrap'>
+                <view class='flex-y-center' wx:for="{{showMealRec}}" wx:key="key">
+                    <view class='changeBg'>
+                        <image class='bg' src="../../images/card/homepage_quan_01.png" mode="aspectFit" wx:if="{{item.couponType==01}}"></image>
+                        <image class='bg' src="../../images/card/homepage_quan_02.png" mode="aspectFit" wx:elif="{{item.couponType==02}}"></image>
+                        <image class='bg' src="../../images/card/homepage_quan_03.png" mode="aspectFit" wx:else="{{item.couponType==03}}"></image>
+                        <view class='changeContanier'>
+                            <view class='changeLeft'>
+                                <image class="drinkIcon" src="{{item.img}}" mode='aspectFit' wx:if="{{item.couponType==03}}"></image>
+                                <image class="foodIcon" src="{{item.img}}" mode='aspectFit' wx:else></image>
+                            </view>
+
+                            <view class='changeRightSpecial flex-y-center' wx:if="{{item.couponType==01}}">
+                                <view class='flex-row m25'>
+                                    <view class='name blue'>
+                                        <text class='f62'>{{item.price}}</text>元
+                                    </view>
+                                </view>
+                                <view class='price blue'>
+                                    <text class='f22 delete'>原价￥{{item.oldPrice}}</text>
+                                </view>
+                            </view>
+                            <view class='changeRightSpecial flex-y-center' wx:elif="{{item.couponType==02}}">
+                                <view class='flex-row m25'>
+                                    <view class='name orange'>
+                                        <text class='f62'>{{item.price}}</text>元
+                                    </view>
+                                </view>
+                                <view class='price orange'>
+                                    <text class='f22'>{{item.title}}</text>
+                                </view>
+                            </view>
+                            <view class='changeRight flex-y-center' wx:elif="{{item.couponType==03}}">
+                                <view class='flex-row m25'>
+                                    <view class='name pink'>
+                                        <text class='f62 miao'>{{item.price}}</text>元
+                                    </view>
+                                </view>
+                                <view class='price pink'>
+                                    <text class='f22 delete'>原价￥{{item.oldPrice}}</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view>{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+        <!-- 时段优惠 -->
+        <view class='commonBg cardPicBox m25'>
+            <view class='titleBox flex-x' catchtap='lookMore' data-title="2">
+                <view class='center'>
+                    <text>时段优惠</text>
+                    <image class='fireIcon' src="../../images/card/homepage_icon_04.png"></image>
+                </view>
+                <view class='more'>查看更多
+                    <label>>></label>
+                </view>
+            </view>
+            <view class='change flex-x flex-wrap'>
+                <view class='flex-y-center' wx:for="{{showPreferentialRec}}" wx:key="key">
+                    <view class='changeBg'>
+                        <image class='bg' src="../../images/card/homepage_quan_01.png" mode="aspectFit" wx:if="{{item.couponType==01}}"></image>
+                        <image class='bg' src="../../images/card/homepage_quan_02.png" mode="aspectFit" wx:elif="{{item.couponType==02}}"></image>
+                        <image class='bg' src="../../images/card/homepage_quan_03.png" mode="aspectFit" wx:else="{{item.couponType==03}}"></image>
+                        <view class='changeContanier'>
+                            <view class='changeLeft'>
+                                <image class="drinkIcon" src="{{item.img}}" mode='aspectFit' wx:if="{{item.couponType==03}}"></image>
+                                <image class="foodIcon" src="{{item.img}}" mode='aspectFit' wx:else></image>
+                            </view>
+
+                            <view class='changeRightSpecial flex-y-center' wx:if="{{item.couponType==01}}">
+                                <view class='flex-row m25'>
+                                    <view class='name blue'>
+                                        <text class='f62'>{{item.price}}</text>元
+                                    </view>
+                                </view>
+                                <view class='price blue'>
+                                    <text class='f22 delete'>原价￥{{item.oldPrice}}</text>
+                                </view>
+                            </view>
+                            <view class='changeRightSpecial flex-y-center' wx:elif="{{item.couponType==02}}">
+                                <view class='flex-row m25'>
+                                    <view class='name orange'>
+                                        <text class='f62'>{{item.price}}</text>元
+                                    </view>
+                                </view>
+                                <view class='price orange'>
+                                    <text class='f22'>{{item.title}}</text>
+                                </view>
+                            </view>
+                            <view class='changeRight flex-y-center' wx:elif="{{item.couponType==03}}">
+                                <view class='flex-row m25'>
+                                    <view class='name pink'>
+                                        <text class='f62 miao'>{{item.price}}</text>元
+                                    </view>
+                                </view>
+                                <view class='price pink'>
+                                    <text class='f22 delete'>原价￥{{item.oldPrice}}</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view>{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

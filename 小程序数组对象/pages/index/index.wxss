@@ -1,0 +1,110 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.showod{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: yellow
+}
+
+
+
+
+.voucher{
+  width: 650rpx;
+  height: 160rpx;
+  display: flex;
+  position:relative;
+}
+.voucher .bg{
+  width: 100%;
+  height: 100%;
+}
+.voucher .title{
+  width: 93rpx;
+  height: 93rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.voucher_container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.voucher_left,.voucher_right{
+  flex: 1.5;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+.voucher_left > image{
+  width: 137rpx;
+  height: 110rpx;
+  margin-top: 15rpx;
+  margin-left: 20rpx;
+}
+.voucher_money{
+  font-size: 41rpx;
+}
+.voucher_pric{
+  font-size: 25rpx;
+  text-decoration: line-through;
+}
+.voucher_use{
+  width: 100rpx;
+  font-size: 23rpx;
+  background: #ffffff;
+  color: #FEB326;
+  text-align: center;
+  padding: 3rpx 10rpx;
+  margin-top: 10rpx;
+  border-radius: 20rpx 20rpx 20rpx 20rpx;
+}
+.voucher_center{
+  flex: 2;
+  height: 80%;
+  color: #ffffff;
+}
+.voucher_name{
+  font-size: 40rpx;
+  font-weight: 500;
+}
+.voucher_icon{
+  width: 100rpx;
+   background: #F75655;
+   font-size: 25rpx;
+   padding: 5rpx 10rpx;
+   margin: 5rpx 0;
+}
+.voucher_time{
+  font-size: 20rpx;
+  color: #ffffff;
+}

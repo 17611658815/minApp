@@ -1,0 +1,267 @@
+/**app.wxss**/
+
+/**全局样式**/
+@import "./template/navbar/navbar.wxss";
+
+/*自定义头部导航*/
+
+page {
+    background: #eee;
+    color: #333;
+    font-size: 32rpx;
+    height: 100%;
+}
+
+button::after {
+    border: 0;
+}
+
+/* 通用渐变按钮 */
+
+button.btn {
+    display: inline-block;
+    height: 80rpx;
+    padding: 0 90rpx;
+    line-height: 80rpx;
+    border-radius: 40rpx;
+    letter-spacing: 2rpx;
+    color: #fff;
+    background: linear-gradient(to right, rgba(30, 153, 255, 0.68), rgba(30, 153, 255, 1));
+}
+
+/* 镂空按钮 */
+button.blankBtn {
+    display: inline-block;
+    height: 80rpx;
+    padding: 0 90rpx;
+    line-height: 80rpx;
+    border-radius: 40rpx;
+    letter-spacing: 2rpx;
+    color: #51b0ff;
+    border: 2rpx solid #51b0ff;
+    background-color: #fff;
+}
+
+/* 父层高度80rpx */
+
+.icon {
+    width: 40rpx;
+    height: 40rpx;
+    vertical-align: top;
+    margin-top: 20rpx;
+}
+
+/* 通用底部 */
+
+.subBtn {
+    height: 80rpx;
+    padding: 20rpx;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    box-shadow: 0 0 50rpx #ccc;
+    text-align: center;
+}
+
+.container {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+/** flex布局 **/
+
+.flex {
+    display: flex;
+}
+
+/** 换行 **/
+.flex-wrap {
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+/** 横向布局 **/
+
+.flex-x {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/** 纵向布局 **/
+
+.flex-y {
+    display: flex;
+    flex-direction: column;
+}
+
+/** 纵向居中布局 **/
+
+.flex-y-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/** 弹性盒子内容 **/
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+/** 水平垂直都居中 **/
+
+.align-center {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center; /*x轴对齐方式*/
+    align-items: center; /*y轴对齐方式*/
+}
+
+/** 居中布局 **/
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.db {
+    display: inline-block;
+}
+
+.delete {
+    text-decoration:line-through;
+}
+
+/**蒙层**/
+
+.commonShadow {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    opacity: 0.5;
+    z-index: 99;
+}
+
+.commonContent {
+    position: fixed;
+    top: 0rpx;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    z-index: 999;
+    color: #fff;
+    font-size: 36rpx;
+    background-color: #f1f1f5;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 48rpx;
+}
+
+.gray {
+    color: #9c9c9c;
+}
+
+.blue {
+    color: #51b0ff;
+}
+
+.blueBg {
+    background-color: #51b0ff;
+}
+
+.lightBlue {
+    color: #eef7ff;
+}
+
+.lightBlueBg {
+    background-color: #eef7ff;
+}
+
+.deepBlue {
+    color: #2c7ab9;
+}
+
+.red {
+    color: #fd553d;
+}
+
+.lightRed {
+    color: #feeaea;
+}
+
+.lightRedBg {
+    color: #feeaea;
+}
+
+.yellow {
+    color: #fea208;
+}
+
+.lightYellow {
+    color: #ffdf60;
+}
+
+.couponIcon {
+    width: 100rpx;
+    height: 100rpx;
+    margin-right: 25rpx
+}
+
+.arrowRight {
+    display: inline-block;
+    color: #bbbbb9;
+    border-top: 4rpx solid;
+    border-right: 4rpx solid;
+    width: 18rpx;
+    height: 18rpx;
+    transform: rotate(45deg);
+}
+
+/**优惠券，新手有礼列表领取样式**/
+
+.useBtn {
+    width: 30%;
+    height: 60rpx;
+    line-height: 60rpx;
+    color: #fff;
+    font-size: 30rpx;
+    border-radius: 50rpx;
+    text-align: center;
+    background: linear-gradient(90deg, #83c6ff, #87c8ff, #54afff, #249aff);
+}
+
+.usedBtn {
+    width: 30%;
+    height: 60rpx;
+    color: #ccc;
+    text-align: center;
+    font-size: 28rpx;
+}

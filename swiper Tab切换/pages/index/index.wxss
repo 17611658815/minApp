@@ -1,0 +1,25 @@
+.switchTab{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.switchTab>view{
+  flex: 1;
+  text-align: center;
+}
+.active{
+  color: red;
+  border-bottom: 5rpx solid red;
+}
+swiper{
+  width: 100%;
+
+}
+swiper-item{
+  display: flex;
+  font-size: 44rpx;
+  align-items: center;
+  justify-content: center;
+  background: plum;
+}

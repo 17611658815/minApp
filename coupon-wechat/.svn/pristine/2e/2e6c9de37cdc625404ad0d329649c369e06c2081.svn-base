@@ -1,0 +1,3 @@
+/* components/list/list.wxss */
+@import '../../pages/coupon/coupon.wxss';
+@import '../../app.wxss';

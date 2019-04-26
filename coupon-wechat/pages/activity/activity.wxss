@@ -1,0 +1,227 @@
+/* pages/activity/activity.wxss */
+
+view {
+  box-sizing: border-box;
+}
+
+.banner {
+  width: 750rpx;
+  height: 478rpx;
+}
+
+.title {
+  width: 92%;
+  margin: 0 auto;
+  padding: 30rpx 20rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  margin-top: -110rpx;
+  font-weight: bold;
+  box-shadow: 2px 4px 8px #ddd;
+}
+
+.smallText {
+  font-size: 26rpx;
+  margin-top: 12rpx;
+  font-weight: normal;
+}
+
+.rulesBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 55rpx;
+  display: inline-block;
+  padding-left: 10rpx;
+  vertical-align: sub;
+}
+
+.arrowRight {
+  width: 12rpx;
+  height: 12rpx;
+  margin-bottom: 2rpx;
+  margin-left: 14rpx;
+}
+
+.goods {
+  width: 92%;
+  margin: 0 auto;
+  padding: 20rpx;
+  padding-bottom: 10rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  margin-top: 26rpx;
+  box-shadow: 2px 4px 8px #ddd;
+}
+
+.subTitle {
+  font-size: 35rpx;
+  margin-bottom: 60rpx;
+}
+
+.goodsBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.goodItem {
+  position: relative;
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.goodItem image {
+  display: block;
+  margin: 0 auto;
+  width: 137rpx;
+  height: 110rpx;
+}
+
+.flag {
+  position: absolute;
+  top: -40rpx;
+  left: 18rpx;
+  font-size: 27rpx;
+  padding: 5rpx 8rpx;
+  color: #fff;
+  background: #ff7251;
+  border-radius: 30%;
+}
+
+.goodName {
+  font-size: 26rpx;
+  padding: 16rpx 10rpx;
+}
+
+.goodPrice {
+  font-weight: bold;
+  padding-right: 10rpx;
+}
+
+.goodOldPrice {
+  font-size: 25rpx;
+  text-decoration: line-through;
+}
+
+.bottom {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.share {
+  background: #eef7ff;
+  font-size: 28rpx;
+  padding: 20rpx 0;
+}
+
+.start {
+  height: 132rpx;
+  padding: 26rpx;
+  background: #fff;
+}
+
+.invite.btn {
+  padding: 0 30rpx;
+  font-size: 30rpx;
+  letter-spacing: 0;
+}
+
+.headImgs {
+  /* border: 2rpx solid #f00; */
+  align-items: center;
+  justify-content: center;
+  width: 400rpx;
+}
+
+.userLogo {
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 10rpx;
+  border: 2rpx solid #51b0ff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.userLogo.void{
+  background-color: #ddd;
+  color:#fff;
+}
+
+.bigLogo{
+  width: 90rpx;
+  height: 90rpx;
+  margin: 0 15rpx;
+  border: 0;
+}
+/* 规则 */
+
+.commonMask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.alertContent {
+  position: fixed;
+  top: 250rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 999;
+}
+
+.alertList {
+  margin: 100rpx;
+  font-size: 30rpx;
+  border-radius: 15rpx;
+  color: #757474;
+  background-color: #fff;
+}
+
+.content {
+  padding: 25rpx 25rpx 27rpx 25rpx;
+}
+
+.alertTitle {
+  text-align: center;
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.alertTitle image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.desc {
+  padding: 20rpx 0;
+  font-size: 26rpx;
+  line-height: 50rpx;
+  height: 500rpx;
+  overflow-y: scroll;
+}
+
+.getUserInfo{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: red;
+  z-index: 99999;
+}

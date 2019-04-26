@@ -1,0 +1,47 @@
+/* pages/turnTable/turnTable.wxss */
+@import '../../app.wxss'; 
+@import '../../template/cardbar/cardbar.wxss';
+
+.turnTablePage{
+  width: 750rpx;
+  height: 1310rpx;
+}
+.image_bg{
+  width: 750rpx;
+  height: 1310rpx;
+}
+.pointer{
+  position: absolute;
+  left: 50%;
+  top: 100rpx;
+  margin-left: -345rpx;
+  width: 690rpx;
+  height: 690rpx;
+}
+.tag{
+  position: absolute;
+  left: 40rpx;
+  top: 160rpx;
+  width: 180rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 28rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  box-shadow:0px 3px 15px #FFFFFF;
+}
+.btn{
+  position: absolute;
+  left: 50%;
+  top: 1150rpx;
+  margin-left: -250rpx;
+  width: 500rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 34rpx;
+  background: linear-gradient(to right, #56b3ff,#49adff,#289eff,#1e99ff);
+}

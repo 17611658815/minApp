@@ -1,0 +1,186 @@
+/* pages/receiveCoupon/receiveCoupon.wxss */
+@import "../index/index.wxss";
+.noMore {
+  padding-top: 15rpx;
+  color: #9c9c9c;
+  font-size: 28rpx;
+  text-align: center;
+}
+.couponMargin {
+    margin: 20rpx 0rpx 37rpx 40rpx;
+}
+
+.couponHeader {
+    position: fixed;
+    top: 127rpx;
+    left: 0;
+    width: 100%;
+    height: auto;
+    font-size: 28rpx;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.pull {
+    height: 20%;
+}
+
+.couponContent{
+    width: 100%;
+    margin-top: 130rpx;
+    z-index: 99;
+}
+
+.voucher {
+    display: flex;
+    position: relative;
+    width: 671rpx;
+    height: 183rpx;
+    margin-bottom: 30rpx;
+}
+
+.voucher .bg {
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 93rpx;
+    height: 93rpx;
+}
+
+.voucherContainer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.voucherLeft{
+    flex: 1.2;
+    height: 80%;
+}
+
+.voucherRight {
+    flex: 1.5;
+    height: 80%;
+}
+
+.voucherLeft > image {
+    width: 137rpx;
+    height: 110rpx;
+    margin-top: 15rpx;
+    margin-left: 32rpx;
+}
+
+.f40 {
+    font-size:40rpx;
+}
+
+.voucherCenter {
+    flex: 2;
+    height: 80%;
+}
+
+.voucherTag {
+    width: 80rpx;
+    background-color: #f75656;
+    font-size: 20rpx;
+    padding: 7rpx;
+    margin: 10rpx 0; 
+}
+
+.voucherTime {
+    font-size: 18rpx;
+}
+
+.userBtn{
+    width: 121rpx;
+    height: 30rpx;
+    margin-top: 10rpx;
+}
+
+.footerBox {
+  width: 80%;
+  height: 200rpx;
+  margin: 50rpx auto 20rpx;
+}
+
+.footerBox > image {
+  display: block;
+  width: 59rpx;
+  height: 41rpx;
+  margin: 0 auto;
+}
+
+.findMore {
+  padding-top: 15rpx;
+  color: #51b0ff;
+  font-size: 28rpx;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.switchTab{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  font-size: 25rpx;
+  color: #8e8e8d
+}
+.switchTab>view{
+  flex: 1;
+  height: 110rpx;
+  text-align: center;
+}
+
+.switchTab .active{
+  width: 80rpx;
+  border: 5rpx solid #51b0ff;
+  margin: auto;
+  margin-top: 20rpx;
+}
+
+.switchTab>view:not(:first-child){
+  flex: 1;
+  height: 100rpx;
+  text-align: center;
+  border-left: 2rpx solid #ddd;
+}
+
+.badgeBox {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.badgeCount {
+    position: absolute;
+    right: 45rpx;
+    top: -5rpx;
+    width: 35rpx;
+    height: 35rpx;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+
+.f50 {
+    font-size: 50rpx;
+}
+
+.desTitle {
+    font-size: 22rpx;
+}
+
+.foodName {
+    font-size: 35rpx;
+}

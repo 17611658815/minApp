@@ -1,0 +1,10 @@
+/* components/module/module.wxss */
+.contBox{
+  width: 100%;
+  height: 100%;
+  background: yellow;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  
+}

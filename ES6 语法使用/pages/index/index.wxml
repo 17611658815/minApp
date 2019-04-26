@@ -1,0 +1,41 @@
+      <view class='arayBox'>
+
+        <view class='content'>
+          <view class='boxs'>
+               231321312
+          </view>
+        </view>
+        <view class='audiosBox2'>
+          <view class='showdo' wx:if="{{shade}}"></view>
+          <view class="audioOpen" bindtap="listenerButtonPlay" wx:if="{{!isOpen}}">
+            <!-- 第一次点击播放 -->
+            <image class='image2' src="../../images/play.png" />
+          </view>
+          <view class="audioOpen" bindtap="Play" wx:if="{{isOpen2}}">
+            <image class='image2' src="../../images/play.png" />
+            <!--播放 -->
+          </view>
+          <view class="audioOpen" bindtap="listenerButtonPause" wx:if="{{!isOpen2 && isOpen}}">
+            <image src="../../images/pause.png" />
+          </view>
+          <view class='slid'>
+            <slider bindchange="sliderChange" block-size="12px" step="2" value="{{offset}}" max="{{max}}" selected-color="#4c9dee" />
+            <view>
+              <text class='times'>{{starttime}}</text>
+              <!-- 进度时长 -->
+
+              <text class='times'>{{durations}}</text>
+              <!-- 总时长 -->
+            </view>
+          </view>
+        </view>
+        <view class='textBox'>
+        <textarea class='txt_ar' fixed="true" bindinput='getarertext' maxlength="-1" placeholder-class='fontSize' value='{{record_txt}}'>
+        </textarea>
+       </view>
+        <view class='buttonBox'>
+          <button bindtap='remake'>重录</button>
+          <button class='addBtn' bindtap='subAudioTxt'>提交</button>
+        </view>
+
+      </view>

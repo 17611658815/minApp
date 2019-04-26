@@ -1,0 +1,7 @@
+
+<import  src="../../template/module.wxml" />
+
+<view class='content'>
+                                                       <!-- 传递参数 Object Array Function Bol -->
+     <template is='modules' bindtap='alertIndex' data="{{arr:arr,alertIndex:'alertIndex'}}"></template>
+</view>
