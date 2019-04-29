@@ -1,15 +1,20 @@
 //logs.js
-const util = require('../../utils/util.js')
-
+const utils = require('../../utils/util.js')
 Page({
-  data: {
-    logs: []
-  },
-  onLoad: function () {
-    this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(log => {
-        return util.formatTime(new Date(log))
-      })
-    })
-  }
+    data: {
+        logs: [],
+        nvabarData: {
+            showCapsule: 1,
+            title: 'LOADING',
+        },
+    },
+    onLoad: function() {
+        if (utils.isiPhoneX()) {
+            this.data.iphonex = utils.isiPhoneX()
+        }
+        this.setData({
+            iphonex: this.data.iphonex
+        })
+        this.loadList()
+    },
 })

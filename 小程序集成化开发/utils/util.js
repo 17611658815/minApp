@@ -48,14 +48,27 @@ const Log = function(str) {
 const showTost = function (text) {
     wx.showToast({
         title: text,
-        icon: 'success',
+        icon: 'none',
         duration: 2000
     })
 }
+const isiPhoneX = function(){
+    let isiphone = false
+    wx.getSystemInfo({
+        success: (res) => {
+            if (res.model.search('iPhone X') != -1) {
+                isiphone =  true 
+            }
+        }
+    })
+    return isiphone
+}
+
 module.exports = {
     formatTime: formatTime,
     showLonding: showLonding,
     hideLonding: hideLonding,
     Log: Log,
-    showTost: showTost
+    showTost: showTost,
+    isiPhoneX: isiPhoneX
 }

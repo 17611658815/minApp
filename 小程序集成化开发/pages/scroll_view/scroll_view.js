@@ -5,11 +5,16 @@ const app = getApp()
 Page({
     data: {
         page: 1,
+        iphonex:false,
         // list: [{ id: 1, name: '张三' }, { id: 2,name: '李四'}],
         //滚动部分变量
         act_addList: [],
         orientationList: [],
-        toView: ''
+        toView: '',
+        nvabarData: {
+            showCapsule: 1,
+            title: 'scroll_view锚链接',
+        },
 
     },
     delitem(e) {
@@ -26,13 +31,12 @@ Page({
         })
     },
     onLoad: function () {
-        var arr = [1, 2, 3, 4, 5, 6, 7, 8]
-        arr.map(function (res, i, a) {
-            console.log(res, i, a)
+        if (utils.isiPhoneX()){
+            this.data.iphonex = utils.isiPhoneX()
+        }
+        this.setData({
+            iphonex:this.data.iphonex
         })
-        var createTime = new Date();
-        var createDate = utils.formatTime(new Date);
-        utils.Log(createDate)
         this.loadList()
     },
     //初始化数据
@@ -62,10 +66,25 @@ Page({
     },
     //锚链接点击事件
     scrollToViewFn: function (e) {
-        let id = e.target.dataset.id;
-        this.setData({
-            toView: 'toView' + id, //toViewG
-        });
+        let that = this,
+        id = e.target.dataset.id;
+        wx.vibrateShort()
+        wx.showToast({
+            title: id,
+            icon:'none',
+            duration:1000,
+            success:()=>{
+                that.setData({
+                    toView: 'toView' + id, //toViewG
+                });
+            }
+        })
         console.log(this.data.toView)
     },
+    onShareAppMessage(){
+        return {
+            title: "有来医生·权威健康科普平台",
+            path: "pages/scroll_view/scroll_view?scene=1008"
+        };
+    }
 })

@@ -1,18 +1,27 @@
-// pages/loading/loading.js
+const utils = require('../../utils/util.js')
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        iphonex:false,
+        nvabarData: {
+            showCapsule: 1,
+            title: 'LOADING',
+        },
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        if (utils.isiPhoneX()) {
+            this.data.iphonex = utils.isiPhoneX()
+        }
+        this.setData({
+            iphonex: this.data.iphonex
+        })
     },
 
     /**

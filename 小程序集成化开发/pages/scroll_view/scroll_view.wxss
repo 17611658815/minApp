@@ -11,9 +11,14 @@
     box-sizing: border-box;
     background: #f8f8f8;
 }
-.orientation_region{
+.orientation_region_noiphoneX{
     position: fixed;
-    top: 10rpx;
+    top: 150rpx;
+    right: 10rpx;
+}
+.orientation_region_isiphoneX{
+    position: fixed;
+    top: 260rpx;
     right: 10rpx;
 }
 

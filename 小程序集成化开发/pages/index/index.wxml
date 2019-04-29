@@ -14,11 +14,15 @@
     </view>
 </view>
 <template is="loading" data></template> -->
-
-<navigator url='/pages/scroll_view/scroll_view'>
-    <button>scroll_view锚链接 </button>
-</navigator>
-<navigator url='/pages/loading/loading'>
-    <button>自定义loding</button>
-</navigator>    
+<header-nav navbar-data='{{nvabarData}}'></header-nav>
+<view class="container {{iphonex == true ?'isiphone':'noiphone'}}" >
+   
+    <navigator url='/pages/loading/loading'>
+        <button>自定义loding</button>
+    </navigator> 
+     <navigator url='/pages/scroll_view/scroll_view'>
+        <button>scroll_view锚链接 </button>
+    </navigator>
+</view>
+   
 
