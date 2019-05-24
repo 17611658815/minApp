@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+   <!-- <button  bindtouchstart="mytouchstart" bindlongtap="mylongtap" 
+    bindtouchend="mytouchend" bindtap="mytap">点我吧</button> -->
+     <button type="primary" bindlongtap="longTap" bindtouchend="mytouchend" bindtap="mytap" bindtouchstart="touchStart" bindtouchend="touchEnd">
+    长按
+  </button>
+</view>
