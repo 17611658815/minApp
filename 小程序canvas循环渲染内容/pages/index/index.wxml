@@ -1,0 +1,6 @@
+<view class='contentBox'>
+    <canvas disable-scroll="true" class="canvas1" id="canvas1" canvas-id="canvas1" disable-scroll="true"></canvas>
+    <view>
+        <button class='downloadimg' bindtap='downloadimg'>保存相册</button>
+    </view>
+</view>

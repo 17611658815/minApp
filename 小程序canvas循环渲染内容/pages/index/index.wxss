@@ -1,0 +1,12 @@
+#canvas1{
+    width: 100%;
+    flex: 1;
+}
+.downloadimg{
+    background: white;
+}
+.contentBox{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
