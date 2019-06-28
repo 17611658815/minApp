@@ -1,0 +1,9 @@
+<button catchtap='clickPup'>点击底部动画弹窗</button>
+
+<!-- 底部弹窗动画的内容 -->
+<view class='pupContent {{click? "showContent": "hideContent"}} {{option? "open": "close"}}' hover-stop-propagation='true'>
+    <view class='pupContent-top'>测试一下</view>
+</view>
+<!-- 固定的背景 -->
+<view class='pupContentBG {{click?"showBG":"hideBG"}} {{option?"openBG":"closeBG"}}' catchtap='clickPup'>
+</view>

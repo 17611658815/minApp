@@ -1,3 +1,4 @@
-<view class='contBox' bindtap='search' animation="{{animation}}">
-   {{msg}}
+<view class='contBox' bindtap='parentFn' animation="{{animation}}">
+
+6666
 </view>
