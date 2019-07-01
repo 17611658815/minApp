@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+        <rich-text nodes="{{content}}" bindtap="tap"></rich-text>
+  </view>
+</view>

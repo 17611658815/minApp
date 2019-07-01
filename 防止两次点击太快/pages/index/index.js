@@ -9,10 +9,10 @@ Page({
   onclick(){
       var nowTime = new Date();
       if (nowTime - this.data.tapTime < 1000) {
-          console.log('太快了')
+          console.log('阻断')
           return;
       }
-      console.log('执行了')
+      console.log('执行')
       this.setData({ tapTime: nowTime });
   }
 })
