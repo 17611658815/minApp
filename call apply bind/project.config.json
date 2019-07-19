@@ -12,9 +12,9 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.4.3",
+	"libVersion": "2.7.4",
 	"appid": "wx09475e1c13deb589",
-	"projectname": "ES6%20%E8%AF%AD%E6%B3%95%E4%BD%BF%E7%94%A8",
+	"projectname": "%40keyframes%E5%8A%A8%E7%94%BB",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

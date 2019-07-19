@@ -19,17 +19,11 @@
 .usermotto {
   margin-top: 200px;
 }
-.itemBox{
-    width: 100%;
+.containers{
     display: flex;
 }
-.itemBox view{
-    width: 100rpx;
-    height: 60rpx;
-    text-align: center;
-    line-height: 60rpx;
-    margin-left: 30rpx;
-}
-.active{
-    background: yellow
+.rui-star{
+    display: inline-block;
+    width: 50rpx;
+    height: 50rpx;
 }

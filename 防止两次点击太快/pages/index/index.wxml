@@ -1,4 +1,20 @@
 <!--index.wxml-->
-<view class="container">
+<!-- <view class="container">
     <button bindtap='onclick'>点击</button>
+</view> -->
+
+<view wx:for='{{goodsSpecs}}'>
+    <view>{{item.name}}</view>
+    <view class='itemBox'>
+        <view 
+          bindtap='onchange' 
+          wx:for="{{item.columns}}" 
+          wx:for-item='val' 
+          wx:for-index='key' 
+          class='{{ val.flag ? "active":""}}' 
+          data-index='{{index}}' 
+          data-key='{{key}}'>
+            {{val.spec_value}}{{arr[index]}}{{key}}
+        </view>
+    </view>
 </view>

@@ -1,0 +1,66 @@
+.teachers_banner {
+  width: 100%;
+  height: 650px;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.teachers_b {
+  position: relative;
+  margin-top: 80px;
+}
+
+#slide {
+  margin: 0 auto;
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+
+image {
+  width: 400rpx;
+  height: 550rpx;
+}
+
+#slide li {
+  position: absolute;
+  width: 400rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -webkit-align-items: flex-start;
+  overflow: hidden;
+  box-shadow: 0 0 20px #1d374d;
+}
+
+#slide li img {
+  width: 100%;
+  height: 100%;
+}
+
+.slide_right {
+  padding: 40px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+.slide_right dl {
+  padding-top: 10px;
+}
+
+.arrow .prev, .arrow .next {
+  position: absolute;
+  width: 50px;
+  top: 38%;
+  z-index: 9;
+  font: 700 96px 'simsun';
+  opacity: 0.3;
+  color: #fff;
+  cursor: pointer;
+}
+
