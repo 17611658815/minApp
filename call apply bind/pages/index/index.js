@@ -47,17 +47,7 @@ Page({
         // while (true) {
         //     console.log('Hello, world');
         // }
-       this.b64Encode('你好') // "JUU0JUJEJUEwJUU1JUE1JUJE"
-        this.b64Decode('JUU0JUJEJUEwJUU1JUE1JUJE') // "你好"
-    },
-   b64Encode(str) {
-        return btoa(encodeURIComponent(str));
-    },
-
-b64Decode(str) {
-        return decodeURIComponent(atob(str));
     }
-
 
 })
 

@@ -1,0 +1,83 @@
+<!--index.wxml-->
+<view class="container">
+
+  <!-- 用户 openid -->
+  <!-- <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+    ></button>
+    <view>
+      <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
+    </view>
+  </view> -->
+  <!-- <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button> -->
+
+  <!-- 上传图片 -->
+  <!-- <view class="uploader">
+    <view class="uploader-text" bindtap="doUpload">
+      <text>上传图片</text>
+    </view>
+    <view class="uploader-container" wx:if="{{imgUrl}}">
+      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+    </view>
+  </view> -->
+  <!-- <button bindtap='setUserMsg'>获取数据</button> -->
+  <view class='box' style='background:#FFFFFF'>
+    <label>姓名:</label>
+    <input data-value='{{inpVal}}' bindinput='getName' value='{{inpVal}}'></input>
+  </view>
+  <view class='box' style='background:#FFFFFF;margin-top:10rpx;'>
+    <label>年龄:</label>
+    <input data-value='{{inpVal}}' bindinput='getAge' value='{{inp2Val}}'></input>
+  </view>
+  <button open-type="getUserInfo" wx:if='{{show}}' bindtap='setUserMsg'>提交</button>
+  <button open-type="getUserInfo" wx:if="{{!show}}" data-id="{{id}}" bindtap='updetMsg'>确认修改</button>
+</view>
+
+
+
+<view class='infoMsg'>
+  <view>
+    <label>姓名</label>
+    <label>年龄</label>
+    <label>ID</label>
+    <label>操作</label>
+  </view>
+  <view wx:for="{{list}}">
+    <label>{{item.name}}</label>
+    <label>{{item.age}}</label>
+    <label>{{item.created}}</label>
+    <label>
+      <text data-id='{{item._id}}' bindtap="delUserMsg">删除</text>
+      <text data-id='{{item._id}}' bindtap='changeMsg'>修改</text>
+    </label>
+  </view>
+
+</view>
+
+
+<!--start banner   -->
+<!-- <view class='wsiperBox'>
+<swiper class='home-swiper' autoplay='true' bindchange='changDot' interval='4000'>
+  <swiper-item wx:for="{{slider}}" wx:for-index="index" wx:key="slider">
+    <image src='{{item.img}}'></image>
+  </swiper-item>
+</swiper>
+<view class="dots">
+  <block wx:for="{{slider}}" wx:key="slider">
+    <view class="dot {{index == swiperCurrent?'actives':''}}"></view>
+  </block>
+</view>
+</view> -->
+<!-- 轮播图光标 -->
+
+<!-- end banner -->
+
+<!-- 
+<button open-type="getUserInfo" bindgetuserinfo="GetUserInfo">授权登录</button>
+
+<button open-type="getUserInfo" bindgetuserinfo="GetUserInfos">授权登录2</button> -->
+<!-- <image src='{{avatarUrl}}'></image> -->
