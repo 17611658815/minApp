@@ -11,7 +11,8 @@ Page({
         name: 'amy',
         position: '前端',
         company_name: '礼品圈@焱桓信息科技（上海）有限公司',
-        qrcode: '../../images/qrcode.png'
+        qrcode: '../../images/qrcode.png',
+        url:'https://m.mfk.com/doctor/qrcode/337.shtml',
     },
     onLoad() {
         this.setData({

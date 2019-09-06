@@ -2,5 +2,5 @@
 <view class=''>
   <button bindtap='bindSave'>海报1</button>
   <canvas canvas-id='canvas' id="canvas_posters"></canvas>
-
 </view>
+<!-- <web-view src="https://m.mfk.com/doctor/qrcode/337.shtml"></web-view> -->

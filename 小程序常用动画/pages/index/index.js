@@ -48,6 +48,11 @@ Page({
         }
       })
     }
+    
+    setInterval(()=>{
+        this.moveClick()
+    },2000)
+     
   },
 
   moveClick: function () {

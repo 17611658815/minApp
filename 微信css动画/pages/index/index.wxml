@@ -1,6 +1,6 @@
 <!-- 呼吸动画 -->
 <view>
-  <button class='transpond btn_on' animation="{{animationData}}" catchtap='onShareAppMessage' open-type='share'>
+  <button class='transpond btn_on' catchtap='onShareAppMessage' open-type='share'>
     分享好友</button>
 </view>
 <!-- 旋转颜色渐变 -->

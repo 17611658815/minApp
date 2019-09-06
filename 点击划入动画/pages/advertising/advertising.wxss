@@ -1,0 +1,44 @@
+.container {
+  overflow: hidden;
+}
+
+.bannerTit {
+  height: 194rpx;
+}
+
+.cd {
+  margin-top: 10rpx;
+  height: 480rpx;
+  position: relative;
+  z-index: 999;
+}
+
+.look {
+  padding: 20rpx 0;
+}
+
+.look, .cd, .scroll {
+  background: #fff;
+}
+.scroll{
+  overflow-y:hidden; 
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 4%;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.logs{
+  padding: 10rpx 0;
+}
+.model {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
