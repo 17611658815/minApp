@@ -1,0 +1,32 @@
+<view class="fortune_box bg5">
+    <view class="fortune">
+        <navigator class="li" hoverClass="none" mode="widthFix" url="/pages/fortune_info/fortune_info?id={{index+1}}" wx:for="{{list}}" wx:key="index">
+            <image class="li_img" src="https://api.xzw.com/static/image/xcx/fortune_{{index+1}}.png"></image>
+            <view class="name">{{item.name}}</view>
+            <view class="date">{{item.date}}</view>
+        </navigator>
+    </view>
+    <view class="b_cloud"></view>
+   <!--  <view class="mini">
+        <navigator appId="wxeed897178979283c" class="li" hoverClass="none" openType="navigate" target="miniProgram">
+            <image src="../../image/icon1.png"></image>
+            <text>星座查询</text>
+        </navigator>
+        <navigator appId="wx5b6822003a148895" class="li" hoverClass="none" openType="navigate" target="miniProgram">
+            <image src="../../image/icon3.png"></image>
+            <text>星座配对</text>
+        </navigator>
+        <navigator appId="wxe83fdba251addcab" class="li" hoverClass="none" openType="navigate" target="miniProgram">
+            <image src="../../image/icon4.png"></image>
+            <text>星盘</text>
+        </navigator>
+        <navigator appId="wx86ac70758738a28c" class="li" hoverClass="none" openType="navigate" target="miniProgram">
+            <image src="../../image/icon5.png"></image>
+            <text>十二生肖</text>
+        </navigator>
+        <navigator appId="wx1d859da92525f039" class="li" hoverClass="none" openType="navigate" target="miniProgram">
+            <image src="../../image/icon6.png"></image>
+            <text>生肖配对</text>
+        </navigator>
+    </view> -->
+</view>

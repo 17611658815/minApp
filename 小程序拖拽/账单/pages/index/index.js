@@ -42,6 +42,7 @@ Page({
         that.setData({
           write: write
         },function(){
+            // 获取元素宽高
           wx.createSelectorQuery().select('.pushbill').boundingClientRect(function (res) {
             console.log(res)
             that.data.writesize = [res.width, res.height];

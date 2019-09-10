@@ -1,0 +1,99 @@
+<view bindtap="hideTabs" class="container bg1" style="min-height:{{hei+100}}px">
+    <block wx:if="{{currentTab==tabindex}}" wx:for="{{infodata}}" wx:for-index="tabindex" wx:key="index1">
+        <view class="bg_t"></view>
+        <view class="b_bgstar"></view>
+        <view class="inner">
+            <view bindtap="showModal" class="title">
+                <view class="ico_change"></view>
+                <view>切换星座</view>
+            </view>
+            <view class="box">
+                <view class="box_t clear">
+                    <view class="dt">
+                        <image class="dt_img" src="https://api.xzw.com/static/image/xcx/xz_{{id}}.png"></image>
+                        <text class="dt_title">{{name}}</text>
+                    </view>
+                    <view class="dd">
+                        <text class="dd_title">{{tab[currentTab]}}运势({{date[tabindex]}})</text>
+                        <view class="star1">
+                            <view class="star_on" style="width:{{infodata[tabindex].index[0].s*20}}%"></view>
+                        </view>
+                        <text class="dd_text">{{infodata[tabindex].desc}}</text>
+                    </view>
+                </view>
+                <view class="ul">
+                    <view class="li" wx:if="{{stb!=0}}" wx:for="{{infodata[tabindex].index}}" wx:for-index="stb" wx:key="index2">
+                        <text class="li_title">{{item.t}}</text>
+                        <view class="star2" wx:if="{{item.s}}">
+                            <view class="star_on" style="width:{{item.s*20}}%"></view>
+                        </view>
+                        <text class="li_text" wx:if="{{item.v}}">{{item.v}}</text>
+                    </view>
+                </view>
+                <view class="content">
+                    <view wx:for="{{infodata[tabindex].content}}" wx:key="index3">
+                        <text class="c_title">{{item.t}}</text>
+                        <text class="c_info">{{item.v}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="mini">
+                <navigator appId="wxecd2a0ace8ade337" class="more_app" hoverClass="none" openType="navigate" target="miniProgram" wx:if="{{!showTabs}}">
+                    <text>更多应用</text>
+                </navigator>
+                <button bindgetuserinfo="bindGetUserInfo" bindtap="showShareModal" class="share" openType="getUserInfo" wx:if="{{!showTabs}}">炫耀结果</button>
+            </view>
+        </view>
+    </block>
+</view>
+<view class="more_fortune">
+    <view class="{{showTabs?'tab_items show':'tab_items'}}">
+        <view bindtap="swichNav" class="view{{index+1}}" data-current="{{index+1}}" wx:if="{{currentTab!=index}}" wx:for="{{tab}}" wx:key="index">{{item}}</view>
+    </view>
+    <view bindtap="showTabs" class="tap_more">
+        <image class="icon" src="../../image/ico_more.gif"></image>
+        <text class="text">{{tab[currentTab]}}运势</text>
+    </view>
+</view>
+<view bindtap="hideModal" class="layer" wx:if="{{mengshow}}"></view>
+<view catchtap="inbtn" class="float_box {{showModalStatus?'slideup':'slidedown'}}" style="bottom:{{bottom}}" wx:if="{{modalHidden}}">
+    <view class="f_title">
+        <image class="f_titleimg" src="https://api.xzw.com/static/image/xcx/s_xz.png"></image>
+    </view>
+    <view class="f_main">
+        <view class="f_ul clear">
+            <view bindtap="changexz" class="f_li" data-index="{{index+1}}" wx:for="{{list}}" wx:key="index">
+                <view class="f_libg">
+                    <image class="f_liimg" src="https://api.xzw.com/static/image/xcx/xz_{{index+1}}.png"></image>
+                </view>
+                <view class="f_litxt">{{item.name}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view bindtap="hideShareModal" class="layer" wx:if="{{sharelayer}}"></view>
+<view class="float_share {{sharemodal?'slideup':'slidedown'}}" style="bottom:{{bot}}" wx:if="{{sharebox}}">
+    <button class="st qun" openType="share">
+        <view class="sbtn">
+            <image src="../../image/timg.png"></image>
+        </view>转发到好友或群聊</button>
+    <view bindtap="share" class="st pyq">
+        <view class="sbtn">
+            <image src="../../image/share_circle.png"></image>
+        </view>生成朋友圈分享图</view>
+</view>
+<view bindtap="closeQcode" catchtouchmove="false" class="canvas_mask" hidden="{{hide_qcode}}"></view>
+<view catchtouchmove="false" class="canvas_box" hidden="{{hide_qcode}}">
+    <view class="q_canva">
+        <canvas canvasId="myCanvas"></canvas>
+        <view class="q_text" hidden="{{!openSettingBtnHidden}}">
+            <text>图片已保存到相册</text>
+            <text>可在相册中选取该图片分享到朋友圈</text>
+        </view>
+        <button bindopensetting="handleSetting" class="q_text" hidden="{{openSettingBtnHidden}}" openType="openSetting">
+            <text>点击授权相册读取权限</text>
+            <text>只有授权后才能保存到相册哦~</text>
+        </button>
+    </view>
+    <image bindtap="closeQcode" src="../../image/icon_close.png"></image>
+</view>
