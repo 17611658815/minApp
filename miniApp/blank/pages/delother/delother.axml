@@ -1,0 +1,23 @@
+<view class="container bgF {{isIphoneX ? 'paddingBtm180':'paddingBtm90'}}">
+  <view class="width90  padding30 fontSize-26 color3">
+      选择取消原因，方便无助君为您取消订单
+  </view>
+  <view class="width90  padding30 fontSize-26 color1">
+      取消原因
+  </view>
+  <view class="width90 checkList fontSize-26 color1" onTap="swatchTab" data-index="{{index}}" a:for="{{5}}">
+    <view class="checkBox" onTap="selectCheckBox">
+      <image mode="scaleToFill" a:if='{{current == index}}' src="../../images/fill_2x.png"/>
+    </view>
+    <view>
+        不想租了
+    </view>
+  </view>
+</view>
+<view class="footBtnBox">
+  <view class="footBtnBox_box">
+    <view onTap="goback">我在想想</view>
+  <view onTap="alert">确认提交</view>
+  </view>
+   <view class='isIphoneXBox' a:if='{{isIphoneX}}'></view>
+</view>

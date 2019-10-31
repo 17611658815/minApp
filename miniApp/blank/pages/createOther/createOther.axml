@@ -1,0 +1,58 @@
+<view class="container padding30 bgF">
+  <image mode="scaleToFill" class="fill_2x" src="../../images/fill_2x.png"/>
+  <view class="marginTop color1 fontSize-36 fontWeight5">订单预约成功</view>
+  <view class="padding30 color3 fontSize-30">24小时内将代扣首期费用，请留意后续短信通知</view>
+  <view class="paddingBtm color3 fontSize-26 dpf">
+   <view class="icon_num"></view>  芝麻信用 · 免押金
+  </view>
+
+</view>
+<view class="container bgF padding30 borderBtm marginTop">
+  <view class="width90 padStl">
+    <view class="width100 dpfb paddingBtm">
+      <text class="color1 fontSize-28">短租</text>
+      <text class="color1 fontSize-28">50</text>
+    </view>
+    <view class="width100 dpfb paddingBtm">
+      <text class="color3 fontSize-28">每日租金</text>
+      <text class="color3 fontSize-28">￥28</text>
+    </view>
+    <view class="width100 dpfb paddingBtm">
+      <text class="color3 fontSize-28">首期应付</text>
+      <text class="color3 fontSize-28">￥30</text>
+    </view>
+    <view class="width100 dpfb paddingBtm">
+      <text class="color3 fontSize-28">第二期开始得月租金，将通过支付报免密支付</text>
+      <text class="color3 fontSize-28">￥298.00</text>
+    </view>
+  </view>
+  <view class="buy_txt">
+        商品租赁到期后，如果需要买断商品仅支付￥28888
+      </view>
+</view>
+<view class="container bgF padding30">
+  <view class="width90 padStl">
+    <view class="width100 dpfb paddingBtm">
+      <text class="color1 fontSize-28">总押金</text>
+      <text class="color1 fontSize-28">50</text>
+    </view>
+    <view class="width100 dpfb paddingBtm">
+      <text class="color1 fontSize-28">芝麻信用免押金</text>
+      <text class="color1 fontSize-28">50</text>
+    </view>
+    <view class="width100 dpfb paddingBtm">
+      <text class="color1 fontSize-28">已冻结押金</text>
+      <text class="color1 fontSize-28">50</text>
+    </view>
+  </view>
+</view>
+
+<view class="createOtherBtn">
+  <view onTap="goOtherList">查看订单</view>
+  <view onTap="goIndex">返回首页</view>
+</view>
+<view class="footerTetx">
+  <view class="footerTetx_1"></view>
+  <view class="footerTetx_2">本租赁服务由深圳金大数据科技有限公司提供</view>
+  <view class="footerTetx_1"></view>
+</view>

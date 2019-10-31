@@ -1,0 +1,64 @@
+<view class="headertext fontSize-26 color3">
+    <view class="dpf">
+       <image mode="scaleToFill" src="../../images/success2.png"/> 便捷管理你的信息，用与快速办理该服务</view>
+    <view class="marginTop dpf"><image mode="scaleToFill" src="../../images/success2.png"/>芝麻信用承诺确保你的信息安全</view>
+</view>
+<view class="container">
+    <view class="marginTop userInfo">
+        <view class="dpfb width90 color3 fontSize-26">
+          <text>姓名</text>
+          <text>张三</text>
+        </view>
+        <view class="dpfb marginTop width90 fontSize-26 color3">
+            <text>身份证号</text>
+             <text>4106*******515151</text>
+        </view>
+  </view>
+</view>
+<view class="container width100 bgF">
+      <view class="width90 padding30 dpf">
+          <view class="leaber">住宅地址(省市区)</view>
+           <picker
+                  onChange="bindObjPickerChange"
+                    value="{{arrIndex}}" 
+                    range="{{objectArray}}"
+                    range-key="name">
+                <view class="picker">
+                    <text class="color3 fontSize-28">{{objectArray[arrIndex].name}}</text> <image class='icon_right' src='../../images/icon/arrowright.png'></image>
+                </view>
+            </picker>
+      </view>
+      <view class="width90 padding30 dpf">
+          <view class="leaber">住宅地址(街道地址)</view>
+          <view class="valBox">
+               <input  onInput="valChange1"  value="{{val1}}"  placeholder-class='textAreaCtyle'  placeholder="精准到门派号，4-20个字" />
+               <image class="delimage" onTap="delvalu1" a:if='{{val1!=""}}' mode="scaleToFill" src="../../images/icon/close.png"/>
+          </view>
+      </view>
+      <view class="width90 padding30 dpf">
+          <view class="leaber">手机号</view>
+          <view class="valBox">
+                <input  onInput="valChange2" value="{{val2}}"  placeholder-class='textAreaCtyle'  placeholder="本人手机号" />
+                 <image class="delimage" onTap="delvalu2" a:if='{{val2!=""}}' mode="scaleToFill" src="../../images/icon/close.png"/>
+          </view>
+      </view>
+      <view class="width90 padding30 dpfb">
+          <view class="leaber">手机验证码</view>
+          <view class="phonCode">
+            <view class="left dpf">
+                <input  onInput="valChange3" value="{{val3}}"  placeholder-class='textAreaCtyle'  placeholder="请输入" />
+                 <image class="delimage" onTap="delvalu3" a:if='{{val3!=""}}' mode="scaleToFill" src="../../images/icon/close.png"/>
+            </view>
+            <view class="codeBtn">
+              发送验证码
+            </view>
+          </view>
+      </view>
+</view>
+<view class="container padding30 color3">
+    <view>请谨慎修改信息</view>
+    <view class="marginTop">芝麻相关信息将同步更新(如个人信息及芝麻通行证)</view>
+      <view onTap="goshopAddres" class="addbtn">
+          提 交
+      </view>
+</view>

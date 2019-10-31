@@ -1,0 +1,18 @@
+<view class="invite">
+    <view class="padding30 fontSize-36 color0 fontWeight5">我的邀请二维码</view>
+    <view class="codeBox">
+        <view class="codePic">
+
+        </view>
+        <view>
+           <view class="fontSize-30 fontWeight5">本月累计邀请 <text style='color:#DECC76'>0</text>单</view> 
+           <view class="fontSize-30 fontWeight5">总共累计邀请 <text style='color:#D6333C'>0</text>单</view> 
+        </view>
+    </view>
+    <view class="padding30 fontSize-36 color0 fontWeight5">
+      规则说明
+    </view>
+    <view class="contentBox">
+通过我得邀请二维码扫码进入小程序，提交订单成功后，且该订单签收商品次日后，订单状态转为租用中，视为一次有效得邀请
+    </view>
+</view>

@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="dpfC width100 borderBtm" a:for='{{textArr}}'>
+    <view class="width90 fontSize30 fontWeight5 padding30">{{item.title}}</view>
+    <view class="dpfC width90" a:for='{{item.textArr}}' onTap="checked" data-index='{{index}}' data-idx='{{idx}}' a:for-index="idx" a:for-item="itemName">
+      <view class="dpfb width100 padding20">
+        <view class="fontSize28 fontWeight5 dpf">
+          <image mode="scaleToFill" class="problem" src="../../images/icon/problem-icon.png"/> {{itemName.name}}</view>
+        <image mode="scaleToFill" class="right_icon {{itemName.checked ? 'rotateRight':''}}" src="../../images/icon/arrowright.png"/>
+      </view>
+      <view class="textBox" a:if='{{itemName.checked}}'>
+                租赁中喝租赁到期可随时买断，支付买断尾款即可终身拥有，
+                若想提前买断,租期内可在我的订单内面点击买断按钮，
+                确认买断费用后支付成功即可买断商品
+                <text class="span"></text> 
+                <!-- 小三角 -->
+      </view>
+    </view>
+  </view>
+    <view class="footbox width90 dpfb">
+      <view class="fontSize28 color3">仍然需要帮助？</view>
+      <view class="servicebtn">联系客服</view>
+  </view>
+</view>

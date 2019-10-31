@@ -1,0 +1,36 @@
+.invite{
+  width: 90%;
+  padding: 30rpx 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: #ffffff;
+}
+.invite>view{
+  width: 100%;
+}
+
+.codeBox{
+  display: flex;
+}
+.codeBox>view{
+  flex: 1;
+  height: 300rpx;
+}
+.codePic{
+  background: #999999;
+  display: flex;
+  align-items: center;
+}
+.codeBox>view:nth-child(2){
+  margin-left: 20rpx;
+}
+.contentBox{
+  font-size: 28rpx;
+  color: #000000;
+  line-height: 40rpx;
+}
+.color0{
+color: #000000;
+}

@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="dpfC width100" style='padding-top:20rpx;' id='list'>
+     <view class="navList width100">
+        <view onTap="swatchTab" 
+        data-index='{{index}}' 
+        class="{{currentTab==index ? 'color1 navActive':'color1'}}" 
+        a:for='{{navList}}'>{{item}}</view>
+    </view>
+</view>
+<view class="width90 padStl padding30 dpf">
+  使用说明 <image mode="scaleToFill" class="explain" onTap="shadeShow" src="../../images/icon/1062465.png"/>
+</view>
+<view class="bound" a:for='{{5}}'>
+  <view class="couponBox">
+      <view class="color7">
+          <text style='font-size:26rpx;'>￥</text>
+          <text class="font-weight:700" style='font-size:90rpx;'>199</text>
+      </view>
+      <view class="couponCeter">
+          <text class="fontWeight5 fontSize-28">收藏有礼，下单独享</text>
+          <text class="color3 fontSize-26 marginTop10">首月慢199可用</text>
+      </view>
+      <view class="couponBtn">
+          <view>去使用</view> 
+      </view>
+  </view>
+  <view class="times color3 fontSize-26">
+    有效期：2019年8月8日---2020年月8日
+  </view>
+</view>
+
+<view class="shadeBox" a:if='{{isShow}}'>
+      <view class="Content">
+            <view class="paddingBtm dpfC fontSize-30 fontWeight5">使用说明</view>
+            <view class="fontSize-26 color3 linHeight">1.第一笔订单只能使用一张优惠卷，每张优惠卷只能使用一次</view>
+             <view class="fontSize-26 color3 linHeight">2.第一笔订单只能使用一张优惠卷，每张优惠卷只能使用一次</view>
+            <view class="fontSize-26 color3 linHeight">3.第一笔订单只能使用一张优惠卷，每张优惠卷只能使用一次</view>
+            <view class="fontSize-26 color3 linHeight">4.第一笔订单只能使用一张优惠卷，每张优惠卷只能使用一次</view>
+            <view class="fontSize-26 color3 linHeight">5.第一笔订单只能使用一张优惠卷，每张优惠卷只能使用一次</view>
+             <view class="fontSize-26 color3 linHeight">6.第一笔订单只能使用一张优惠卷，每张优惠卷只能使用一次</view>
+            <view class="fontSize-26 color3 linHeight">7.第一笔订单只能使用一张优惠卷，每张优惠卷只能使用一次</view>
+      </view>
+      <image mode="scaleToFill" onTap="shadeShow" src="../../images/close2_2x.png"/>
+</view>

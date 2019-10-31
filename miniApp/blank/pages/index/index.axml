@@ -1,0 +1,109 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 关注 -->
+  <view class='dpfC width90 padStl bgF'>
+    <view class="collectBox dpfb">
+      <view class="dpf">
+        <image class="logo marginRight" mode="scaleToFill" src="../../images/icon/logo.png"/>
+        <text>物品租赁-生活号</text>
+      </view>
+      <view class="collectBtn">
+            关注
+      </view>
+    </view>
+    <!-- 轮播图 -->
+    <view class='home-swiper'>
+      <swiper class="swiper" indicator-dots='true' indicator-color='rgba(255,255, 255, .3)'  indicator-active-color="#62DAD1"   autoplay="true" circular='true' duration="1000" interval="5000">
+        <swiper-item a:for='{{bannerArr}}'  onTap="goGoodsDetails">
+          <image src="{{item}}"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+    <!-- 导航 -->
+    <view class='home-navList'>
+      <view open-type="switchTab" hover-class='none' a:for='{{navArr}}' data-index='{{index}}' onTap="goList">
+        <view class='home-navList-item'>
+          <view class='home-navList-item-icon'>
+            <image src='{{item.icon}}'></image>
+          </view>
+          <view class='home-navList-item-text'>
+              {{item.name}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='phoneNumber width100'>
+      <image mode="aspectFill" src='../../images/icon/AirPods2.jpg'></image>
+    </view>
+  </view>
+  <view class='dpfC width90 padStl bgF'>
+    <view class='home-hot-activity'>
+      <view class='home-hot-activity-left' bindtap='goNearby'>
+        <image src='../../../images/icon/11-iPhone-11Pro.png'></image>
+      </view>
+      <view class='home-hot-activity-right'>
+        <view>
+          <image src='../../../images/icon/11-hongbao.png'></image>
+        </view>
+        <view class="marginTop">
+          <image src='../../../images/icon/11-iPhone-11.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 手机列表 -->
+  <view class="container">
+    <view class='layoutContent dpfC width90 padStl bgF' style='margin-top:20rpx;' a:for='{{3}}'>
+      <view class="phoneList">
+        <view class="padding30 fontSize-36 fontWeight5">全新手机</view>
+        <view class="phone_img">
+          <image mode="aspectFill" src="../../images/icon/11-iPhone.png"/>
+        </view>
+        <view class="listBox">
+          <view class="listBox_item" a:for='{{6}}' onTap="goGoodsDetails">
+            <view class="listBox_item_img dpfC">
+              <image mode="scaleToFill" src="../../images/icon/iPhone-11-Pro.png"/>
+            </view>
+            <view class="phoneName white_noWrap">iphone 11 Pro</view>
+            <view class="phonelowNum fontSize-22 color3 marginTop5">比购买省4000元起</view>
+            <view class="phonePriceNum marginTop5">
+              <text class="fontSize-20 color7">￥</text>
+              <text class="fontSize-32 color7 fontWeight5">17.4</text>
+              <text class="fontSize-22 color3">/天</text>
+            </view>
+            <view class="tagBox">
+                         新品特惠
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部 -->
+  <view class="width100 dpfC">
+      <view class="imgBox width100">
+          <image mode="scaleToFill" src="../../images/icon/mate20X5G.jpg"/>
+      </view>
+      <view class="footerContent width100 dpf">
+          <view class="List_item">
+            <view class="icon_box"></view>
+            <view class="fontSize-30 color1 fontWeight5 marginTop5">品质保障</view>
+            <view class="fontSize-22 color3 marginTop5">品牌保障 专业可靠</view>
+          </view>
+          <view class="List_item">
+            <view class="icon_box"></view>
+            <view class="fontSize-30 color1 fontWeight5 marginTop5">信用免押</view>
+            <view class="fontSize-22 color3 marginTop5">0元押金 更显轻松</view>
+          </view>
+          <view class="List_item">
+            <view class="icon_box"></view>
+            <view class="fontSize-30 color1 fontWeight5 marginTop5">顺丰发货</view>
+            <view class="fontSize-22 color3 marginTop5">安全护航 快速送达</view>
+          </view>
+      </view>
+      <view class="dpf padding30">
+          <view class="solid"></view>
+          <view class="fontSize-22 color3 marginTop5">本租赁服务由深圳金达数据科技有限公司提供</view>
+          <view class="solid"></view>
+      </view> 
+  </view>

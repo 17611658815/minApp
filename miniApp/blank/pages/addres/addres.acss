@@ -1,0 +1,79 @@
+.headertext{
+  width: 94%;
+    padding: 30rpx 3%;
+    background: #ffffff; 
+}
+.headertext image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.userInfo{
+  width: 90%;
+  padding: 30rpx 0;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx 10rpx 0 0 ;
+}
+.leaber{
+    width: 300rpx;
+}
+.valBox{
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+.valBox input{
+  flex: 1;
+  height: 30rpx;
+  font-size: 28rpx;
+  color: #000000;
+  text-align: right;
+   padding-right: 20rpx;
+}
+.delimage{
+  width: 30rpx;
+  height: 30rpx;
+}
+.textAreaCtyle{
+   font-size: 28rpx;
+  color: #999999;
+}
+.codeBtn{
+  padding-left: 20rpx;
+  border-left: 2rpx solid #e2e2e2;
+  font-size: 28rpx;
+  color: #999999;
+}
+.phonCode{
+  height: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.phonCode input{
+  width: 100rpx;
+  text-align: right;
+  padding-right: 20rpx;
+}
+.addbtn{
+  width: 90%;
+  height: 80rpx;
+  background: #57D0C9;
+  color: #ffffff;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: 20rpx;
+  border-radius: 90rpx;
+}
+.icon_right{
+    width: 30rpx;
+    height: 30rpx;
+}
+.picker{
+  width: 400rpx;
+  display: flex;
+  justify-content: flex-end;
+}

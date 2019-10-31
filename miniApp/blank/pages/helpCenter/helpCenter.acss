@@ -1,0 +1,41 @@
+.textBox{
+  padding: 20rpx; 
+  background: #F6F6F6;
+  font-size: 22rpx;
+  color: #333333;
+  line-height: 30rpx;
+  margin-bottom: 20rpx;
+  position: relative
+}
+/* 小三角样式 */
+.span{
+position:absolute;left:30rpx;top:-30rpx;border-width:20rpx;border-style:solid dashed dashed; border-color:#F6F6F6 transparent transparent;font-size:0; line-height:0; transform: rotate(180deg)
+}
+
+.rotateRight{
+  transform: rotate(270deg)
+}
+.problem{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+.container{
+  min-height: 100vh;
+}
+.footbox{
+  padding: 0 3%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,-50%)
+ 
+}
+.servicebtn{
+  padding: 20rpx;
+  background: #F2DA37;
+  border-radius: 5rpx;
+}

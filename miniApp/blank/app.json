@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/list",
+    "pages/may/may",
+    "pages/details/details",
+    "pages/helpCenter/helpCenter",
+    "pages/other/other",
+    "pages/otherdetails/otherdetails",
+    "pages/bill/bill",
+    "pages/coupon/coupon",
+    "pages/addres/addres",
+    "pages/shopAddres/shopAddres",
+    "pages/invite/invite",
+    "pages/orderdetails2/orderdetails2",
+    "pages/delother/delother",
+    "pages/createOther/createOther",
+    "pages/logistics/logistics"
+  ],
+  "window": {
+    "defaultTitle": "物主租赁"
+  },
+  "tabBar": {
+    "textColor": "#999999",
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "name": "租赁",
+        "icon": "images/tabber/home_nor.png",
+        "activeIcon": "images/tabber/home_press.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "name": "列表",
+        "icon": "images/tabber/list_nor.png",
+        "activeIcon": "images/tabber/list_press.png"
+      },
+      {
+        "pagePath": "pages/may/may",
+        "name": "我的",
+        "icon": "images/tabber/me_nor.png",
+        "activeIcon": "images/tabber/me_press.png"
+      }
+    ]
+  }
+}

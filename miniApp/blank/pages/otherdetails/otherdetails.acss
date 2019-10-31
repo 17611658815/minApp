@@ -1,0 +1,97 @@
+.otherlistBox{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.list_item_title{
+  width: 94%;
+  padding: 30rpx 3%;
+  border-bottom: 2rpx solid #e2e2e2
+}
+.otherMsg{
+  width: 94%;
+  padding: 20rpx 0;
+   display: flex;
+  align-items: center;
+}
+.otherPic image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.otherinfo{
+    flex: 1;
+    height: 180rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20rpx;
+}
+.layoutBtn{
+  width: 200rpx;
+  height: 30rpx;
+  font-size: 22rpx;
+  color: #8FD7CC;
+  text-align: center;
+  line-height: 30rpx;
+  border: 2rpx solid #8FD7CC;
+}
+.textarBox{
+  width: 94%;
+  height: 500rpx;
+  background: #F7F7F7;
+  padding: 30rpx 3%;
+  font-size: 26rpx;
+  color: #999999;
+}
+.read{
+  width: 94%;
+  height: 200rpx;
+  background: #F7F7F7;
+  padding: 30rpx 3%;
+  font-size: 26rpx;
+  color: #999999;
+}
+
+
+.tagBox_List{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 30rpx;
+}
+.tagBox_Sele{
+  padding: 10rpx 30rpx;
+  border: 1rpx solid #e2e2e2;
+  border-radius: 90rpx;
+  color: #000000;
+  margin-right: 20rpx;
+  font-size: 26rpx;
+}
+
+.checkedActice{
+  background: #F8DA48
+}
+.checkBox{
+  width: 30rpx;
+  height: 30rpx;
+  border: 2rpx solid #e2e2e2;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.checkBox image{
+  width: 100%;
+  height: 100%;
+}
+.confirmBtn{
+  width: 100;
+  height: 80rpx;
+  border-radius: 90rpx;
+  background: #F8DA48;
+  color: #000000;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: 30rpx;
+}

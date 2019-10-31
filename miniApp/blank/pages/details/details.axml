@@ -1,0 +1,185 @@
+<view class="{{isIphoneX ? 'paddingBtm180':'paddingBtm90'}}">
+
+
+<view class="container">
+  <view class='cleaningDetails-header'>
+    <swiper class="swiper" indicator-dots='true' indicator-color='rgba(255,255, 255, .3)' indicator-active-color="#62DAD1" circular='true' duration="1000" interval="5000">
+      <swiper-item a:for='{{bannerArr}}'>
+        <image mode="scaleToFill" src='{{item}}'></image>
+      </swiper-item>
+    </swiper>
+    <view class="layoutBox">
+      <image mode="scaleToFill" src="../../images/icon/logo.png"/>
+      <view>信用免押 正品保证</view>
+    </view>
+  </view>
+  <view class="width100 creditBox">
+    <view class="iconBox">
+      <image mode="scaleToFill" src="../../images/icon/credit.png"/>
+    </view>
+    <view class="classname">芝麻信用 · 免押金</view>
+  </view>
+  <view class="dpfC width90 padStl bgF">
+    <view class="width100 padding30 fontSize-32">iphone 11 Pro 全新国航</view>
+    <view class="width100">
+      <text class="fontSize-26">日租金</text>
+      <text style='font-size:18rpx;'>￥</text>
+      <text class="fontSize-40 color7 fontWeight5">17.40</text>
+      <text class="fontSize-26 color7">起</text>
+    </view>
+    <view class="width100 padding30">
+      <text class="fontSize-22 color3">月租低至:</text>
+      <text style='font-size:16rpx;' class="color3">￥</text>
+      <text class="fontSize-22 color3">522起</text>
+    </view>
+  </view>
+</view>
+<view class="container bgF marginTop">
+  <view class="dpfb width90 padding30">
+    <view class="fontSize-28">领卷</view>
+    <view class="dpf">
+      <view class="bound">
+          收藏有好礼领卷
+      </view>
+      <image mode="scaleToFill" class="right_icon" src="../../images/icon/arrowright.png"/>
+    </view>
+  </view>
+</view>
+<view class="container bgF marginTop paddingBtm">
+  <view class="dpfb width90 padding30">
+    <view class="fontSize-32 fontWeight5">物主品牌保障</view>
+    <view class="dpf">
+      <view class="fontSize-26 color3">
+            了解更多保障
+      </view>
+      <image mode="scaleToFill" class="right_icon" src="../../images/icon/arrowright.png"/>
+    </view>
+  </view>
+  <view class="dpfb width90">
+    <image mode="scaleToFill" class="safeguard_img" src="../../images/icon/1111.png"/>
+  </view>
+</view>
+<view class="container bgF marginTop paddingBtm">
+  <view class="dpfb width90 padding30">
+    <view class="fontSize-32 fontWeight5">热门推荐</view>
+    <view class="dpf">
+      <view class="fontSize-22 color1 leftBtn marginRight">
+            全部商品
+      </view>
+      <view class="fontSize-22 color1 rightBtn">
+          进店逛逛
+      </view>
+    </view>
+  </view>
+  <view class="dpfb width90 paddingBtm">
+    <scroll-view scroll-x="true" class="nav" scroll-left="{{scrollLeft}}" id="scroll-view" scroll-with-animation="{{true}}">
+        <block>
+          <view class="listBox">
+            <view class="listBox_item" a:for='{{6}}'>
+                <view class="listBox_item_img dpfC">
+                  <image mode="scaleToFill" src="../../images/icon/iPhone-11-Pro.png"/>
+                </view>
+                <view class="phoneName white_noWrap">iphone 11 Pro</view>
+                <view class="phonelowNum fontSize-28">Max 全新</view>
+                <view class="phonePriceNum marginTop5">
+                  <text class="fontSize-20 color7">￥</text>
+                  <text class="fontSize-32 color7 fontWeight5">17.4</text>
+                  <text class="fontSize-22 color3">/天</text>
+                </view>
+            </view>
+          </block>
+    </scroll-view>
+  </view>
+    </view>
+    <view class="tabs {{shadow ? 'shadow' : ''}}" style="top: {{top}}px">
+    <view class="tabs-bar">
+      <block a:for="{{navList}}">
+        <view class="tabs-bar-tab" data-index="{{index}}" onTap="swatchTab">
+          <view class="tabs-bar-tab-title {{currentTab === index ? 'active' : ''}}">{{item}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="list-wrap">
+    <view class="list-container" style="{{ transform: 'translate3d(' +(-currentTab * 100) + 'vw, 0, 0)' }}">
+      <view class="list" style="{{ height: currentTab === 0 ? 'auto' : 0 }}">
+       <image mode="widthFix" src="../../images/icon/_1.png"/>
+        <image mode="widthFix" src="../../images/icon/_2.png"/>
+        <image mode="widthFix" src="../../images/icon/_3.png"/>
+      </view>
+      <view class="list" style="{{ height: currentTab === 1 ? 'auto' : 0 }}">
+      <image mode="widthFix" src="../../images/1.jpg"/>
+        <image mode="widthFix" src="../../images/2.jpg"/>
+        <image mode="widthFix" src="../../images/3.jpg"/>
+        <image mode="widthFix" src="../../images/4.jpg"/>
+      </view>
+      <view class="list" style="{{ height: currentTab === 2 ? 'auto' : 0 }}">
+       <image mode="widthFix" src="../../images/5.png"/>
+        <image mode="widthFix" src="../../images/6.png"/>
+        <image mode="widthFix" src="../../images/222.png"/>
+    </view>
+  </view>
+  <view class="dpfC width100 marginTop">
+    
+    <!-- <view class="tab1 width90" a:if='{{currentTab == 0}}'>
+        <image mode="widthFix" src="../../images/icon/_1.png"/>
+        <image mode="widthFix" src="../../images/icon/_2.png"/>
+        <image mode="widthFix" src="../../images/icon/_3.png"/>
+       
+    </view>
+<view class="tab1 width90" a:if='{{currentTab == 1}}'>
+      <image mode="widthFix" src="../../images/1.jpg"/>
+        <image mode="widthFix" src="../../images/2.jpg"/>
+        <image mode="widthFix" src="../../images/3.jpg"/>
+        <image mode="widthFix" src="../../images/4.jpg"/>
+    </view>
+    <view  class="tab1 width90" a:if='{{currentTab == 2}}'>
+       <image mode="widthFix" src="../../images/5.png"/>
+        <image mode="widthFix" src="../../images/6.png"/>
+        <image mode="widthFix" src="../../images/222.png"/>
+    </view> -->
+     <view class="dpfC width100 borderBtm" a:for='{{textArr}}' onTap="checked" data-index='{{index}}'>
+          <view class="dpfC width90">
+            <view class="dpfb width100 padding20">
+                <view class="fontSize28 fontWeight5 dpf">
+                  <image mode="scaleToFill" class="problem" src="../../images/icon/problem-icon.png"/> {{item.name}}</view>
+                <image mode="scaleToFill" class="right_icon {{item.checked ? 'rotateRight':''}}" src="../../images/icon/arrowright.png"/>
+            </view>
+            <view class="textBox" a:if='{{item.checked}}'>
+                租赁中喝租赁到期可随时买断，支付买断尾款即可终身拥有，
+                若想提前买断,租期内可在我的订单内面点击买断按钮，
+                确认买断费用后支付成功即可买断商品
+                <text class="span"></text>
+            </view>
+          </view>
+        </view>
+        <view class="loadmore" onTap="gohelpCenter">
+          查看更多 >
+        </view>
+  </view>
+
+  <!-- 添加购物车 -->
+
+    <view class='addCartBox'>
+      <view class="addCartBox-box">
+          <view class='addCartBox-box-left'>
+              <view class='addCartBox-box-left-item' onTap='goIndex'>
+                  <image src='../../images/icon/imgw1_07.png'></image>
+                  <text>首页</text>
+              </view>
+              <view class='addCartBox-box-left-item'>
+                  <image src='../../images/icon/imgw2_07.png'></image>
+                  <text>客服</text>
+                  <button class='contactBtn' open-type='contact'></button>
+              </view>
+          </view>
+          <view class='addCartBox-box-right'>
+              <view onTap='selectGood' style="background: #F8DA48;">选择商品规格</view>
+          </view>
+      </view>
+      <view class='isIphoneXBox' a:if='{{isIphoneX}}'></view>
+    </view>
+  </view>
+
+<import src="../../components/selectItems/selectItems.axml"></import>
+<template is="selectItems" data='{{selectShow:selectShow,selectGood:selectGood,current_1:current_1,current_2:current_2,current_3:current_3,change_3:change_3,change_2:change_2,change_1:change_1,falge:falge,selectCheckBox:selectCheckBox,goaddres:goaddres}}'  a:if='{{selectShow}}'></template>

@@ -1,0 +1,388 @@
+/* 关注 */
+.collectBox{
+  width: 100%;
+  height: 120rpx;
+}
+.logo{
+  width: 80rpx;
+  height: 80rpx;
+}
+.collectBtn{
+  width: 80rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  color: #47779B;
+  font-size: 26rpx;
+  border: 2rpx solid #47779B;
+  border-radius: 3rpx;
+}
+swiper{
+    width: 100%;
+    height: 100%;
+}
+
+swiper-item {
+    width: 100%;
+    height: 300rpx;
+}
+.home-content-header {
+    width: 100%;
+    padding: 45rpx 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon_down {
+    width: 35rpx;
+    height: 35rpx;
+}
+.icon_GPS{
+    width: 22rpx;
+    height: 30rpx;
+}
+.picker {
+    max-width: 250rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.home-content-search {
+    width: 100%;
+    height: 60rpx;
+    border-radius: 50rpx;
+    background: #f0f0f0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 30rpx;
+    color: #8f8f8f;
+}
+.home-content-search .icon_search {
+    width: 40rpx;
+    height: 40rpx;
+    padding: 0 15rpx;
+}
+
+.home-swiper {
+    width: 100%;
+}
+
+.home-swiper image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+}
+
+.home-navList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40rpx 0;
+}
+
+.home-navList-item-icon {
+    width: 82rpx;
+    height: 82rpx;
+}
+
+.home-navList-item-icon image {
+    width: 100%;
+    height: 100%;
+}
+
+.home-navList-item {
+    width: 120rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 26rpx;
+    color: #000;
+}
+
+.marginTop {
+    margin-top: 58rpx;
+}
+
+.home-navList-item-text {
+    margin-top: 20rpx;
+}
+
+.phoneNumber {
+    height: 120rpx;
+    display: flex;
+    align-items: center;
+    border-radius: 50rpx;
+    padding-bottom: 20rpx;
+}
+
+.phoneNumber image {
+    width: 100%;
+    height: 100%;
+}
+.home-hot-activity {
+    width: 100%;
+    height:400rpx;
+    display: flex;
+}
+
+.home-hot-activity-left {
+    flex: 1;
+    position: relative;
+    background: white;
+}
+
+.home-hot-activity-left view {
+    font-size: 32rpx;
+    color: #333;
+    font-weight: 500;
+    position: absolute;
+    top: 37rpx;
+    left: 30rpx;
+}
+
+.home-hot-activity-left image {
+    width: 100%;
+    height: 100%;
+}
+
+.home-hot-activity-right {
+    flex: 1;
+    margin-left: 20rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-hot-activity-right>view {
+    flex: 1;
+    position: relative;
+    background: #fff;
+}
+
+.home-hot-activity-right view image {
+    width: 100%;
+    height: 100%;
+}
+
+.home-hot-activity-right view:nth-child(2) {
+    margin-top: 20rpx;
+}
+
+.activity_title {
+    position: absolute;
+    top: 37rpx;
+    left: 30rpx;
+    color: #333;
+    font-weight: 500;
+    font-size: 32rpx;
+}
+
+.activity_text {
+    position: absolute;
+    top: 87rpx;
+    left: 30rpx;
+    color: #999;
+    font-size: 24rpx;
+}
+
+.home-class-server {
+    width: 100%;
+    background: #f8f8f8;
+}
+
+.home-class-server-item {
+    margin-top: 20rpx;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-class-server-item-title {
+    padding: 30rpx 0;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.home-class-server-item-img {
+    display: flex;
+    padding-bottom: 30rpx;
+    justify-content: space-between;
+}
+
+.home-class-server-item-img-Msg {
+    width: 48.5%;
+}
+
+.home-class-server-item-img-Msg:nth-child(2) {
+    margin-left: 28rpx;
+}
+
+.home-class-server-item-img-Msg image {
+    width: 100%;
+    height: 240rpx;
+    border-radius: 10rpx;
+}
+
+.vip_welfare {
+    width: 96%;
+    white-space: nowrap;
+    display: flex;
+    padding-left: 4%;
+    padding-bottom: 30rpx;
+}
+
+.vip_welfare_content {
+    width: 260rpx;
+    height: 133rpx;
+    background: #f8f8f8;
+    border-radius: 10rpx;
+    margin-right: 30rpx;
+    display: inline-block;
+    position: relative;
+}
+
+.vip_welfare_content view:nth-child(1) {
+    margin-left: 22rpx;
+    margin-top: 27rpx;
+    font-size: 32rpx;
+    font-weight: 500;
+}
+
+.vip_welfare_content view:nth-child(2) {
+    margin-left: 22rpx;
+    margin-top: 11rpx;
+    font-size: 24rpx;
+    color: #999;
+}
+
+.home-foot-content {
+    width: 100%;
+    height: 137rpx;
+    background: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btmInit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22rpx;
+    color: #ababab;
+    margin: 20rpx 0;
+}
+
+.solisView {
+    width: 30rpx;
+    height: 2rpx;
+    background: #ababab;
+}
+
+.btmMsg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btmMsg image {
+    width: 25rpx;
+    height: 25rpx;
+    margin-right: 10rpx;
+}
+
+.btmMsg text {
+    font-size: 22rpx;
+    color: #b1b1b1;
+}
+
+.btmMsg view {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 手机列表 */
+.layoutContent{
+  margin-top: 20rpx;
+}
+.phoneList{
+  width: 100%;
+  padding-bottom: 30rpx;
+}
+.listBox{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.listBox_item{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 35rpx;
+   position: relative;
+
+}
+.listBox_item_img{
+  width: 100%;
+}
+.listBox_item_img image{
+  width:200rpx;
+  height: 200rpx;
+}
+.phone_img image{
+  width: 100%;
+  height: 240rpx;
+}
+.phoneName{
+  flex: 1;
+  font-size: 32rpx;
+  color: #333333;
+  background: #ffffff;
+}
+.tagBox{
+   padding: 5rpx 15rpx 5rpx 10rpx;
+  background: #FD3F3F;
+  color: #ffffff;
+  position: absolute;
+  top: 20rpx;
+  left: 0;
+  font-size: 22rpx;
+ border-radius: 0 90rpx 90rpx 0;
+}
+.imgBox image{
+  width: 100%;
+  height: 250rpx;
+}
+
+.List_item{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footerContent{
+  padding: 50rpx 0;
+}
+.icon_box{
+  width: 50rpx;
+  height: 50rpx;
+  background: #999999;
+}
+.solid{
+  width: 20rpx;
+  height: 2rpx;
+  background: #999999;
+  margin: 0 10rpx;
+}

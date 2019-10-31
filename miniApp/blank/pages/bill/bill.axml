@@ -1,0 +1,64 @@
+<view class="container bgF">
+  <view class="otherlistBox borderBtm">
+    <view class="otherMsg">
+      <view class="otherPic">
+        <image mode="scaleToFill" src="../../images/icon/3.jpg"/>
+      </view>
+      <view class="otherinfo">
+        <view class="fontSize-30 color1">锤子移动电源手电筒</view>
+        <view class="fontSize-26 color3">规格：橙色</view>
+        <view class="fontSize-30 color1">租金：￥1/天</view>
+        <view class="layoutBtn">芝麻信用 · 免押金</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="container bgF">
+  <view class="numBox width100 dpf">
+      <view class="flex numListItem">
+          <view class="fontSize-36 color1 fontWeight5">50.00</view>
+          <view class="marginTop10 fontSize-24 color3">应还金额(元)</view>
+      </view>
+      <view class="flex numListItem">
+          <view class="fontSize-36 color1 fontWeight5">50.00</view>
+          <view class="marginTop10 fontSize-24 color3">已还金额(元)</view>
+      </view>
+      <view class="flex numListItem">
+          <view class="fontSize-36 color1 fontWeight5">50.00</view>
+          <view class="marginTop10 fontSize-24 color3">待还金额(元)</view>
+      </view>
+  </view>
+  <view class="paddingBtm">
+      <view class="dpf fontSize-24 width100 color3">
+        <image mode="scaleToFill" class="_exc" src="../../images/_exc.png"/> 账单到期将通过支付报免密支付方式还款，请注意查收信息
+      </view>
+  </view>
+</view>
+<view class="width100 bgF dpfC marginTop">
+  <view class="width90 borderBtm otherItem">
+      <view class="width100 dpfb">
+          <text class="fontSize-22 color3">2/2期</text>
+          <text class="fontSize-28 color1 fontWeight5">待还款</text>
+      </view>
+     <view class="width100 dpfb marginTop">
+          <view>
+              <text style='font-size:16rpx'>￥</text>
+              <text class="fontSize-36 color1 fontWeight5">22.00</text>
+            </view>
+          <text class="fontSize-26 color3">2019-11-15通过支付宝免密支付待还款</text>
+      </view>
+  </view>
+  <view class="width90 borderBtm otherItem bgf7">
+      <view class="width100 dpfb bgf7">
+          <text class="fontSize-22 color3">2/2期</text>
+          <text class="fontSize-28 color1 fontWeight5">已还款</text>
+      </view>
+     <view class="width100 dpfb marginTop bgf7">
+          <view>
+              <text style='font-size:16rpx'>￥</text>
+              <text class="fontSize-36 color1 fontWeight5">22.00</text>
+            </view>
+          <text class="fontSize-26 color3">2019-11-15通过支付宝免密支付待还款</text>
+      </view>
+  </view>
+</view>

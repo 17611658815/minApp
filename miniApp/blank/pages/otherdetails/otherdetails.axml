@@ -1,0 +1,53 @@
+<view class="container bgF">
+  <view class="otherlistBox">
+    <view class="otherMsg">
+      <view class="otherPic">
+        <image mode="scaleToFill" src="../../images/icon/3.jpg"/>
+      </view>
+      <view class="otherinfo">
+        <view class="fontSize-30 color1">锤子移动电源手电筒</view>
+        <view class="fontSize-26 color3">橙色</view>
+        <view class="fontSize-30 color1">租金：￥1/天</view>
+        <view class="layoutBtn">芝麻信用 · 免押金</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="container bgF marginTop borderBtm">
+  <view class="width90 padStl padding30 ">
+    <view class="width100 dpfb">
+      <text class="color3 fontSize-28">商品买断价</text>
+      <text class="color3 fontSize-28">￥50</text>
+    </view>
+    <view class="width100 dpfb padding30">
+      <text class="color3 fontSize-28">已经支付</text>
+      <text class="color3 fontSize-28">￥28</text>
+    </view>
+    <view class="width100 dpfb">
+      <text class="color1 fontSize-28">需支付买断金</text>
+      <text class="color1 fontSize-28">￥50</text>
+    </view>
+  </view>
+</view>
+<view class="container bgF">
+  <view class="width90 padStl padding30 ">
+    <view class="width100 dpfb">
+      <text class="color1 fontSize-28">实际支付</text>
+      <text class="color1 fontSize-28">￥50</text>
+    </view>
+  </view>
+</view>
+<view class="textarBox">
+    买断金支付成功后,订单中元冻结押金（若有）将回自动解冻，原路退回
+</view>
+<view class="read">
+  <view class="tagBox_List">
+    <view class="checkBox" onTap="selectCheckBox">
+      <image mode="scaleToFill" a:if='{{falge}}' src="../../images/fill_2x.png"/>
+    </view>
+   <text>我已经阅读并同意</text><text style="color:#157ECD">《用户租赁及服务协议只买断协议》</text>
+  </view>
+  <view class="confirmBtn">
+        确认商品,去评估
+  </view>
+</view>

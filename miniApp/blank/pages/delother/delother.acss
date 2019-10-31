@@ -1,0 +1,56 @@
+.checkBox {
+  width: 30rpx;
+  height: 30rpx;
+  border: 2rpx solid #e2e2e2;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.checkBox image {
+  width: 100%;
+  height: 100%;
+}
+
+.checkList {
+  display: flex;
+  align-items: center;
+}
+
+.checkList>view:nth-child(2) {
+  flex: 1;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #e2e2e2;
+}
+
+.footBtnBox {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  min-height: 100rpx;
+  flex-direction: column;
+}
+.footBtnBox_box {
+  width: 100%;
+  display: flex;
+  height: 100rpx;
+}
+
+.footBtnBox_box>view:nth-child(1) {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.footBtnBox_box>view:nth-child(2) {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F5DC4D;
+}

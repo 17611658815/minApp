@@ -1,0 +1,59 @@
+<view class="container">
+  <view class="headerPic">
+    <image mode="scaleToFill" src="../../images/icon/11-hongbao.png"/>
+  </view>
+  <view class="grade_Num">
+    <view class="ellipse">
+      <view class="ellipseNum">719</view>
+      <view class="ellipseText">
+        <view></view>
+        <view>信用良好</view>
+        <view></view>
+      </view>
+    </view>
+  </view>
+  <view class="width100 dpfC">
+    <view class="width90 dpfb padding30 color3 fontSize-28 username">
+      <text> 姓名</text>
+      <text> 张三</text>
+    </view>
+  </view>
+  <view class="width100 dpfC borderBtm" style="background: #f7f7f7">
+    <view class="width90 dpfb padding20 color3 fontSize-28">
+      <text class="color3 fontSize-26">收获地址</text>
+      <text style="color:#4EC9B4" class="fontSize-26" onTap="changeInfo">修改</text>
+    </view>
+  </view>
+  <view class="width100 dpfC borderBtm">
+    <view class="width90 dpfb padding30 color3 fontSize-28">
+      <text>手机号</text>
+      <text>176*******5585</text>
+    </view>
+  </view>
+  <view class="width100 dpfC borderBtm">
+    <view class="width90 dpfb padding30 color3 fontSize-28">
+      <text>所在地区</text>
+      <text>北京 北京 朝阳</text>
+    </view>
+  </view>
+  <view class="width100 dpfC">
+    <view class="width90 dpfb padding30 color3 fontSize-28">
+      <text>详细地址</text>
+      <text>海淀国家图书馆</text>
+    </view>
+  </view>
+</view>
+<view class="footBtn dpfC">
+  <view class="width90 dpfC">
+    <view class="tagBox_List fontSize-26">
+      <view class="checkBox" onTap="selectCheckBox">
+        <image mode="scaleToFill" a:if='{{falge}}' src="../../images/fill_2x.png"/>
+      </view>
+      <text>我已经阅读并同意</text>
+      <text style="color:#157ECD">《用户租赁及服务协议只买断协议》</text>
+    </view>
+    <view class="confirmBtn" onTap="goIndex">
+        确认商品,去评估
+    </view>
+  </view>
+</view>

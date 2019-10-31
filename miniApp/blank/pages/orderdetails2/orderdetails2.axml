@@ -1,0 +1,123 @@
+<view class="{{isIphoneX ? 'paddingBtm180':'paddingBtm90'}}">
+<view class="container bgF">
+  <view class="otherstatus">
+      <view class="dpf fontSize-40 fontWeight5">
+        <view class="statusIcon"></view> 
+       待支付</view>
+      <view class="color1 fontSize26 fontWeight5">24h内短信代扣首期费用，请确保账户余额充足，代扣结果将以短信形式告之</view>
+      <view class="color3 fontSize-28">2019-10-24 -17：32：23</view>
+  </view>
+   <view class="otheraddresBox">
+     <view class="otheraddresBox_1">
+        <text>张三</text>
+        <text>18888888888</text>
+     </view>
+     <view class="otheraddresBox_2 dpf">
+       <image mode="scaleToFill" src="../../images/destination_3x.png"/>
+        <text>北京</text>
+        <text>海淀</text>
+        <text>国家图书馆</text>
+     </view>
+     <view class="otheraddresBox_3">
+         如修改地址，请取消订单，重新下单并在信用套餐页面进行修改
+     </view>
+    </view>
+  <view class="otherlistBox">
+    <view class="otherMsg">
+      <view class="otherPic">
+        <image mode="scaleToFill" src="../../images/icon/3.jpg"/>
+      </view>
+      <view class="otherinfo">
+        <view class="fontSize-30 color1">锤子移动电源手电筒</view>
+        <view class="fontSize-26 color3">橙色</view>
+        <view class="fontSize-30 color1">租金：￥1/天</view>
+        <view class="layoutBtn">芝麻信用 · 免押金</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="container bgF marginTop borderBtm">
+  <view class="width90 padStl">
+    <view class="width100 dpfb">
+      <text class="color3 fontSize-28">每日租金</text>
+      <text class="color3 fontSize-28">￥50</text>
+    </view>
+    <view class="width100 dpfb padding30">
+      <text class="color3 fontSize-28">租期</text>
+      <text class="color3 fontSize-28">￥28</text>
+    </view>
+    <view class="width100 dpfb">
+      <text class="color1 fontSize-28">结算方式</text>
+      <text class="color1 fontSize-28">按月支付</text>
+    </view>
+    <view class="width100 dpfb padding30">
+      <text class="color1 fontSize-28">手机意外败仗服务费298元</text>
+      <text class="color1 fontSize-28">￥298.00</text>
+    </view>
+  </view>
+  <view class="buy_txt">
+        商品租赁到期后，如果需要买断商品仅支付￥28888
+      </view>
+</view>
+<view class="container bgF">
+  <view class="width90 padStl padding30 ">
+    <view class="width100 dpfb">
+      <text class="color1 fontSize-28">实际支付</text>
+      <text class="color1 fontSize-28">￥50</text>
+    </view>
+    <view class="width100 dpfb marginTop">
+      <text class="color1 fontSize-28">芝麻信用免押金</text>
+      <text class="color1 fontSize-28">￥5065515</text>
+    </view>
+  </view>
+</view>
+<view class="container bgF marginTop">
+  <view class="width90 padStl padding30 ">
+    <view class="width100 dpfb">
+      <text class="color3 fontSize-28">订单编号</text>
+      <text class="color3 fontSize-28">1545456456DSDSDSDDDS</text>
+    </view>
+    <view class="width100 dpfb marginTop">
+      <text class="color3 fontSize-28">下单日期</text>
+      <text class="color3 fontSize-28">2019-10-25-13：30：03</text>
+    </view>
+    <view class="width100 dpfb marginTop">
+      <text class="fontSize-28" style='color:#5B99C2' onTap="comfirm">取消订单</text>
+    </view>
+  </view>
+</view>
+<view class="container bgF marginTop">
+  <view class="width90 padStl padding30 ">
+    <view class="width100 dpfb">
+      <text class="color1 fontSize-28">相关协议</text>
+      <text class="fontSize-28" style='color:#5B99C2'>《用户租赁及服务协议》</text>
+    </view>
+    <view class="width100 dpfb marginTop">
+      <text class="color3 fontSize-28"></text>
+       <text class="fontSize-28" style='color:#5B99C2'>《用户租赁及服务协议》</text>
+    </view>
+    <view class="width100 dpfb marginTop">
+      <text class="fontSize-28" style='color:#5B99C2'></text>
+      <text class="fontSize-28" style='color:#5B99C2'>《用户租赁及服务协议》</text>
+    </view>
+  </view>
+</view>
+ <view class="footbox width90 dpf">
+    <view class="footbox_box">
+      <view></view>
+      <view class="servicebtn">联系客服</view>
+    </view>
+    <view class='isIphoneXBox' a:if='{{isIphoneX}}'></view>
+ </view>
+  </view>
+<!-- <view class="read">
+  <view class="tagBox_List">
+    <view class="checkBox" onTap="selectCheckBox">
+      <image mode="scaleToFill" a:if='{{falge}}' src="../../images/fill_2x.png"/>
+    </view>
+   <text>我已经阅读并同意</text><text style="color:#157ECD">《用户租赁及服务协议只买断协议》</text>
+  </view>
+  <view class="confirmBtn">
+        确认商品,去评估
+  </view>
+</view> -->

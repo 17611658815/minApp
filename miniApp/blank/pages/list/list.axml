@@ -1,0 +1,34 @@
+<view class="container">
+  <!-- 导航 -->
+  <scroll-view scroll-x="true" class="nav" scroll-left="{{scrollLeft}}" id="scroll-view" scroll-with-animation="{{true}}">
+    <block a:for="{{navArr}}" a:key="{{index}}">
+      <view class="nav-item" data-index="{{index}}" id="item-{{index}}" onTap="swatchTab">
+          <text class="{{currentTab == index ?'active':''}}">{{item.name}}</text> 
+          <text a:if='{{currentTab == index}}' class="solider"></text>
+        </view>
+    </block>
+  </scroll-view>
+   <!-- 手机列表 -->
+  <view class="width100 dpfC list_itemBox">
+    <view class='dpfC width90 padStl bgF'>
+      <view class="phoneList">
+        <view class="listBox">
+          <view class="listBox_item" a:for='{{20}}' onTap="goGoodsDetails">
+            <view class="listBox_item_img dpfC">
+              <image mode="scaleToFill" src="../../images/icon/iPhone-11-Pro.png"/>
+            </view>
+            <view class="phoneName white_noWrap">iphone 11 Pro</view>
+            <view class="phonePriceNum marginTop5">
+              <text class="fontSize-20 color7">￥</text>
+              <text class="fontSize-32 color7 fontWeight5">17.4</text>
+              <text class="fontSize-22 color3">/天</text>
+            </view>
+            <view class="tagBox">
+                         新品特惠
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

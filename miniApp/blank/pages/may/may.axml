@@ -1,0 +1,10 @@
+  <view class="container bgF">
+    <navigator class='dpfb width90 padStl bgF padding30'  
+      hover-class='none' 
+      url='{{item.path}}'
+      style='border-bottom: 1rpx solid #e2e2e2;'
+      a:for='{{navArr}}'>
+      <view>{{item.name}}</view>
+      <image mode="scaleToFill" class="right_icon" src="../../images/icon/arrowright.png"/>
+    </navigator>
+  </view>

@@ -1,0 +1,60 @@
+<template name="selectItems">
+  <view class='selectItems-content' onTap='selectGood' catchtouchmove='ture'>
+  </view>
+  <view class='{{selectShow ? "selectItems-content-box2":"selectItems-content-box"}}' catchtouchmove='ture'>
+      <view class="goodsPic">
+        <view class="letPic">
+            <image mode="scaleToFill" src="../../images/icon/1.jpg"/>
+        </view>
+        <view class="righttext">
+            <view class="color7 fontSize-32 fontWeight5">￥10/天</view>
+            <view>  
+              <text class="color3 fontSize-22">月租金:</text> 
+               <text class="color3" style='font-size:16rpx'>￥</text>   
+              <text class="color3 fontSize-26">300</text>  
+             </view>
+            <view>
+                <text class="color3 fontSize-22">买断尾款</text>  
+               
+                <text class="color3 fontSize-26">2889</text>  
+            </view>
+        </view>
+      </view>
+      <view class="list_1">
+          <view class="fontWeight5 fontSize-32">内存</view>
+          <view class="tagBox_List">
+              <view data-index='0' onTap="change_1" class="tagBox_Sele {{current_1 == 0 ? 'checkedActice':''}}">64G</view>
+              <view data-index='1' onTap="change_1" class="tagBox_Sele {{current_1 == 1 ? 'checkedActice':''}}">128G</view>
+              <view data-index='2' onTap="change_1" class="tagBox_Sele {{current_1 == 2 ? 'checkedActice':''}}">256G</view>
+          </view>
+      </view>
+      <view class="list_1">
+          <view class="fontWeight5 fontSize-32">颜色</view>
+          <view class="tagBox_List">
+              <view data-index='0' onTap="change_2" class="tagBox_Sele {{current_2 == 0 ? 'checkedActice':''}}">黑色</view>
+              <view data-index='1' onTap="change_2" class="tagBox_Sele {{current_2 == 1 ? 'checkedActice':''}}">红色</view>
+              <view data-index='2' onTap="change_2" class="tagBox_Sele {{current_2 == 2 ? 'checkedActice':''}}">黄色</view>
+          </view>
+      </view>
+      <view class="list_1">
+          <view class="fontWeight5 fontSize-32">租期</view>
+          <view class="tagBox_List">
+              <view data-index='0' onTap="change_3" class="tagBox_Sele {{current_3 == 0 ? 'checkedActice':''}}">365天</view>
+          </view>
+      </view>
+      <view class="list_1">
+          <view class="fontWeight5 fontSize-32">增值服务</view>
+         <view class="tagBox_List">
+  <view class="checkBox" onTap="selectCheckBox">
+    <image mode="scaleToFill" a:if='{{falge}}' src="../../images/fill_2x.png"/>
+  </view>
+  <view class="fontSize-30 color3">手机意外保险服务废298元</view>
+</view>
+<view class="confirmBtn" onTap="goaddres">
+        确认商品,去评估
+</view>
+      </view>
+  
+      <image mode="scaleToFill" onTap="selectGood" class="delBtn" src="../../images/close_2x.png"/>
+  </view>
+</template>
