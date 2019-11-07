@@ -1,0 +1,44 @@
+<import src="../../templates/common-list.wxml"></import>
+<import src="../../templates/nomore.wxml"></import>
+<view class="regionSelect">
+    <view class="regionItem">
+        <picker bindchange="bindPCategoryChange" range="{{pcategoryList}}" rangeKey="name" value="{{pcatIndex}}">
+            <view class="picker">
+                <text class="pickerText">{{pcategoryList[pcatIndex].name}}</text>
+                <image class="arrow" src="../../resource/images/arrow.png"></image>
+            </view>
+        </picker>
+    </view>
+    <view class="regionItem">
+        <picker bindchange="bindSCategoryChange" range="{{scategoryList}}" rangeKey="name" value="{{scatIndex}}">
+            <view class="picker">
+                <text class="pickerText">{{scategoryList[scatIndex].name}}</text>
+                <image class="arrow" src="../../resource/images/arrow.png"></image>
+            </view>
+        </picker>
+    </view>
+    <view class="clear"></view>
+</view>
+   <view  bindtap="opentan2"  class="fixedHome">
+        <view class="fixedBg" ></view>
+        <image class="fixedIcon" src="../../resource/images/weixinqun.png"></image>
+    </view>
+<template is="tempCommonList" data="{{articleList:articleList}}"></template>
+<template is="tempNoMore" data="{{noMoreHidden:noMoreHidden}}"></template>
+<import src="../../templates/login-model.wxml"></import>
+<template is="tempLogin" data="{{loginModelHidden:loginModelHidden}}"></template>
+  <view class="cover" style="display:{{istan2?'block':'none'}};">
+            <view class="promotion">
+                <view class="shequxinxi">
+                    <view class="shequ">
+                        <view>点击确定后发送“1”获取群二维码！</view>
+                    </view>                    
+                 </view> 
+                      
+                <view class="bottom">
+
+                    <button class="MenuItem ContactBtn"bindtap="closetan2"  openType="contact" style="background: #3399ff;color: #fff;">确定</button>
+                
+                </view>              
+            </view>
+        </view>

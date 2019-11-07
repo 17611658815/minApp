@@ -1,0 +1,37 @@
+<block wx:if="{{helpExamine.help_examine_open==1}}">
+    <import src="../../resource/wxParse/wxParse.wxml"></import>
+    <view class="HelpExaminePackage">
+        <template is="wxParse" data="{{wxParseData:HelpExaminePackage.nodes}}"></template>
+    </view>
+</block>
+<block wx:if="{{helpExamine.help_examine_open!=1}}">
+    <import src="../../templates/package-list.wxml"></import>
+    <import src="../../templates/nomore.wxml"></import>
+    <view  bindtap="opentan2"  class="fixedHome">
+        <view class="fixedBg" ></view>
+        <image class="fixedIcon" src="../../resource/images/weixinqun.png"></image>
+    </view>
+
+
+
+    <template is="tempPackageList" data="{{packageList:packageList}}"></template>
+    <template is="tempNoMore" data="{{noMoreHidden:noMoreHidden}}"></template>
+</block>
+<import src="../../templates/login-model.wxml"></import>
+<template is="tempLogin" data="{{loginModelHidden:loginModelHidden}}"></template>
+
+         <view class="cover" style="display:{{istan2?'block':'none'}};">
+            <view class="promotion">
+                <view class="shequxinxi">
+                    <view class="shequ">
+                        <view>点击确定后发送“1”获取群二维码！</view>
+                    </view>                    
+                 </view> 
+                      
+                <view class="bottom">
+
+                    <button class="MenuItem ContactBtn"bindtap="closetan2"  openType="contact" style="background: #3399ff;color: #fff;">确定</button>
+                
+                </view>              
+            </view>
+        </view>
