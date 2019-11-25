@@ -1,0 +1,3 @@
+<NavComponent is-search="true" bind:commonNavAttr="commonNavAttr"></NavComponent>
+
+<view>内容区：智酷方程式 小程序分享</view>
