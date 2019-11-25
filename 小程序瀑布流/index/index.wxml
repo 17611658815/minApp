@@ -1,0 +1,10 @@
+<view class="main">
+  <view wx:for="{{columns}}" class="column">
+    <view wx:for="{{item}}" class="column_item" wx:for-item="pics">
+      <image src="{{pics.pic}}" class="column_pic" mode="widthFix" />
+    </view>
+  </view>
+</view>
+<view class="hide">
+  <image wx:for="{{tempPics}}" src="{{item.pic}}" bindload="loadPic" binderror="loadPicError" data-index="{{index}}" />
+</view>
