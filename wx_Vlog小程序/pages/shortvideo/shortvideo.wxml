@@ -1,0 +1,27 @@
+<view class="container" animation="{{animationData}}">
+    <video id="myVideo" 
+        src="{{data[current].shipin}}}" 
+        loop='true'
+        autoplay="true" 
+        object-fit='cover' 
+        poster='{{data[current].thumb}}' 
+        controls='{{controls}}' 
+        show-fullscreen-btn='{{controls}}' 
+        show-center-play-btn='true' 
+        enable-play-gesture='true'
+        bindtimeupdate='timeupdate' 
+        bindplay='onBindplay' 
+        bindpause='onBindpause' 
+        bindtouchstart='touchstart'
+        bindtouchmove='touchmove' 
+        bindtouchend='touchend' 
+        bindtouchcancel='touchcancel'
+        style="height:{{height}}px">
+        <cover-view class="controls" bindtap="videoPlay" wx:if='{{isplay}}'>
+            <cover-image class="icon_play_btn" src="../../images/icon_play_btn.png"></cover-image>
+        </cover-view>
+        <!-- 进入条 -->
+        <cover-view class="{{isIphoneX ? 'primaryPhoneX':'primaryAndroid'}}" style='width:{{percent}}%'></cover-view>
+    </video>
+</view>
+<bottom-nav navbar-data='1'></bottom-nav>

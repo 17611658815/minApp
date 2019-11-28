@@ -84,6 +84,7 @@ Page({
       columns: columns,
       tempPics: []
     })
+      console.log(columns)
     that.jsData.columnsHeight = columnsHeight
   },
   //加载数据
