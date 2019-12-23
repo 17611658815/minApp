@@ -1,0 +1,222 @@
+<!--index.wxml-->
+<view class="content">
+  <view class="top-bar">
+    <view class="barl">
+      <navigator url="/pages/cityselect/cityselect">
+        <image src="/images/ico-dibiao.png" style="width:22rpx;" mode='widthFix'></image>
+        <text>全国</text>
+        <image src="/images/turn-down.png" style="width:16rpx;" mode='widthFix'></image>
+      </navigator>
+    </view>
+    <view class="barc" bindtap="goSearch">
+      <view class="barc-inner">
+        <image class="address" src="/images/ico-sousuo.png" style="width:23rpx;" mode="widthFix"></image>
+        <text>搜索产品</text>
+      </view>
+    </view>
+    <view class="barr">
+      <image src="/images/ico-collect.png" style="width:30rpx;" mode='widthFix'></image>
+      <text>收藏</text>
+    </view>
+  </view>
+
+  <!-- 轮播 -->
+  <view class="banner">
+    <swiper class="swiper-box" indicator-dots="true" indicator-color='rgba(255,255,255,.3)' circular='true' indicator-active-color='#fff' autoplay="true" style='width:100%;height:{{hei}}'>
+      <block wx:for="{{imgUrls}}" wx:key='imgUrls'>
+        <swiper-item>
+          <image class="banner-img" src="{{item}}" mode="widthFix" bindload='banImgHei' />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 新闻公告 -->
+  <view class="gonggao">
+    <image class="gongico" src="/images/ico-voice.png" mode="widthFix" style="width:31rpx;" />
+    <swiper class="swiper-gonggao swiper-box" circular='true' vertical='true' interval='3000' autoplay="true">
+      <swiper-item>
+        <text>关于快递：本店默认申通快递，包邮包申通/中通本店默认申通快递，包邮包申通/中通</text>
+      </swiper-item>
+      <swiper-item>
+        <text>关于快递：本店默认申通快递，包邮包申通/中通本店默认申通快递，包邮包申通/中通</text>
+      </swiper-item>
+    </swiper>
+  </view>
+
+</view>
+
+<!-- 栏目块内容 -->
+<view class="lanmu">
+  <scroll-view class='lanmu-scro' scroll-x bindscroll="bindscroll">
+    <view class='lanmu-scro-wrap' style="width: {{activitiesWrapWidth}}">
+      <navigator wx:for="{{lanmu}}" wx:key='lanmu' class='lanmu-kuai' url="{{item.linkUrl}}" style="width: {{activitiesItemWidth}}">
+        <image src='{{item.imgUrl}}' style="width:103rpx;" mode='widthFix'></image>
+        <text>{{item.name}}</text>
+      </navigator>
+    </view>
+  </scroll-view>
+  <view class='indicator-wrap'>
+    <view class='scroll-indicator'>
+      <view class='indicator-line' style="width: {{indicatorLineWidth}};margin-left: {{indicatorMarginLeft}};"></view>
+    </view>
+  </view>
+</view>
+
+
+<view class="section quanchengtj">
+  <view class="title content">
+    <view class="title-in">
+      <text>全城推荐</text>
+      <image src='/images/title-ico.png' style="width:28rpx;" mode='widthFix'></image>
+    </view>
+  </view>
+
+  <view class="main-nav {{navFixed?'fixed':''}}" id='nav'>
+    <view class="nav content">
+      <view class="nav-in">
+        <text class="nav-text-act">全部</text>
+        <text>实物商品</text>
+        <text>线下核销</text>
+        <text>优惠券</text>
+        <text>拼团商品</text>
+        <text>拼团商品</text>
+        <text>拼团商品</text>
+        <text>拼团商品</text>
+      </view>
+    </view>
+
+    <view class="subnav {{navFixed?'active':''}}" animation="{{slide_up1}}">
+      <view class="subnav-in">
+        <text class="subnav-text-act">全城</text>
+        <text bindtap="dzshow">附近</text>
+        <text bindtap="pxshow">排序</text>
+        <text>品牌</text>
+        <text bindtap="jgshow">价格</text>
+        <view class="shaixuan" bindtap="sxshow">
+          <view class="shaixuan-in">
+            <text>筛选</text>
+            <image src='/images/shaixuan.png' style="width:23rpx;" mode='widthFix'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="content">
+    <view class="tjmain">
+      <view class="hot-box" scroll-y="true" style="height:{{mainwinHeight}}px;z-index:999" >
+        <view class="shangpin" style="margin-top:{{marHeishangpin}}rpx">
+          <view id='left'>
+            <block wx:for='{{leftList}}' wx:key="leftList">
+              <view class="shangpin-item">
+                <view class="cebian">
+                  <image wx:if='{{item.sli==1}}' src='/images/sli_1.png' style="width:33rpx;" mode='widthFix'></image>
+                  <image wx:elif='{{item.sli==2}}' src='/images/sli_2.png' style="width:33rpx;" mode='widthFix'></image>
+                  <image wx:elif='{{item.sli==3}}' src='/images/sli_3.png' style="width:33rpx;" mode='widthFix'></image>
+                  <image wx:else src='/images/sli_4.png' style="width:33rpx;" mode='widthFix'></image>
+                </view>
+                <view class="spimg">
+                  <image class="hot" wx:if='{{item.ishot == 1}}' mode='widthFix' src='/images/sli-hots.png' mode="widthFix"></image>
+
+                  <image src='{{item.src}}' mode='widthFix'></image>
+                  <view class="spinfo">
+                    <view class="h2">{{item.h2}}</view>
+
+                    <view class="sptype" wx:if='{{item.sli==3}}'>
+                      <view class="yuanprice">原价 {{item.yuanprice}}</view>
+                      <text class="price">￥{{item.price}}</text>
+                      <text class="pay">已拼{{item.pay}}件</text>
+                    </view>
+
+                    <view class="sptype" wx:elif='{{item.sli==4}}'>
+                      <text class="price">{{item.price}} 积分</text>
+                      <text class="pay">{{item.pay}}人兑换</text>
+                    </view>
+
+                    <view class="sptype" wx:else>
+                      <text class="price">￥{{item.price}}</text>
+                      <text class="pay">{{item.pay}}人付款</text>
+                    </view>
+
+                    <view class="des">
+                      <image wx:if='{{item.baoyou==1}}' src='/images/baoyou.png' style="width:56rpx;" mode='widthFix'></image>
+                      <image wx:if='{{item.tuikuan==1}}' src='/images/tuikuan.png' style="width:168rpx;" mode='widthFix'></image>
+                      <image wx:if='{{item.rexiao==1}}' src='/images/rexiao.png' style="width:77rpx;" mode='widthFix'></image>
+                    </view>
+                    <view class="pay dianpu">{{item.dianpu}}</view>
+                    <view class="address">
+                      <image src='/images/sp-address.png' style="width:15rpx;" mode='widthFix'></image>
+                      <text>距离您0.5km</text>
+                      <text class="didian">地点：{{item.didian}}</text>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </view>
+
+          <view id='right'>
+            <block wx:for='{{rightList}}' wx:key="rightList">
+              <view class="shangpin-item">
+                <view class="cebian">
+                  <image wx:if='{{item.sli==1}}' src='/images/sli_1.png' style="width:33rpx;" mode='widthFix'></image>
+                  <image wx:elif='{{item.sli==2}}' src='/images/sli_2.png' style="width:33rpx;" mode='widthFix'></image>
+                  <image wx:elif='{{item.sli==3}}' src='/images/sli_3.png' style="width:33rpx;" mode='widthFix'></image>
+                  <image wx:else src='/images/sli_4.png' style="width:33rpx;" mode='widthFix'></image>
+                </view>
+                <view class="spimg">
+                  <image class="hot" wx:if='{{item.ishot == 1}}' mode='widthFix' src='/images/sli-hots.png' mode="widthFix"></image>
+                  <image src='{{item.src}}' mode='widthFix'></image>
+                  <view class="spinfo">
+                    <view class="h2">{{item.h2}}</view>
+
+                    <view class="sptype" wx:if='{{item.sli==3}}'>
+                      <view class="yuanprice">原价 {{item.yuanprice}}</view>
+                      <text class="price">￥{{item.price}}</text>
+                      <text class="pay">已拼{{item.pay}}件</text>
+                    </view>
+
+                     <view class="sptype" wx:elif='{{item.sli==4}}'>
+                      <text class="price">{{item.price}} 积分</text>
+                      <text class="pay">{{item.pay}}人兑换</text>
+                    </view>
+
+                    <view class="sptype" wx:else>
+                      <text class="price">￥{{item.price}}</text>
+                      <text class="pay">{{item.pay}}人付款</text>
+                    </view>
+
+                    <view class="des">
+                      <image wx:if='{{item.baoyou==1}}' src='/images/baoyou.png' style="width:56rpx;" mode='widthFix'></image>
+                      <image wx:if='{{item.tuikuan==1}}' src='/images/tuikuan.png' style="width:168rpx;" mode='widthFix'></image>
+                      <image wx:if='{{item.rexiao==1}}' src='/images/rexiao.png' style="width:77rpx;" mode='widthFix'></image>
+                    </view>
+                    <view class="pay dianpu">{{item.dianpu}}</view>
+                    <view class="address">
+                      <image src='/images/sp-address.png' style="width:15rpx;" mode='widthFix'></image>
+                      <text>距离您0.5km</text>
+                      <text class="didian">地点：{{item.didian}}</text>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+
+      </view>
+      <!-- </swiper-item>
+      </swiper> -->
+
+    </view>
+  </view>
+
+</view>
+
+
+<import src="../../template/tabbar/tabbar.wxml" />
+<template is="tabBar" data="{{tabBar}}" />
+
+

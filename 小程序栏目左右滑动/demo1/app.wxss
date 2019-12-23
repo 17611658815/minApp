@@ -1,0 +1,95 @@
+/**app.wxss**/
+.container {
+  /* height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box; */
+} 
+::-webkit-scrollbar {width: 0;height: 0;color: transparent;}
+input{box-sizing: border-box;}
+button{
+margin: 0;padding: 0;outline: 0;border: 0;
+}
+button:not([size='mini']) {
+ width: auto;
+min-height: auto !important;
+}
+
+
+/* tabar */
+.tab-bar{  position: fixed;  width: 100%;  padding: 0px 2%;  background-color: #fff;box-shadow: 0 0 10rpx rgba(0,0,0,0.1);} 
+.tab-bar text{font-size: 20rpx;}
+.menu-item{  
+  width: 20%;  
+  float: left;  
+  text-align: center;  
+  padding-top: 8px; 
+}  
+.menu-item1{   width: 24%;   float: left;   text-align: center;  padding-top: 8px;  }  
+.img{ width: 41rpx;  height: 34rpx;  display: block;  margin:auto;  }  
+.clear{  clear: both;  }  
+ 
+.button{margin: 130px;}
+
+
+/* 顶部搜索内容块 */
+.top-bar{display: flex;align-items: center;margin: 20rpx 0;}
+.top-bar text{font-size: 30rpx;color: #333;vertical-align: middle;padding-left: 10rpx;}
+.top-bar image{display: inline-block;vertical-align: middle;}
+.barl{width: 25%;text-align: left;}
+.barc{width: 60%;}
+.barr{width: 20%;text-align: right;}
+.barl text{padding-right: 10rpx;}
+.barc{background: #f7f7f7;height: 65rpx;border-radius: 35rpx;position: relative;}
+.barc-inner {position: absolute;line-height: 65rpx;left: 46rpx;}
+.barc text {color: #cccccc;font-size: 26rpx;}
+
+.barc .barc-input{height: 65rpx;line-height: 65rpx;box-sizing: border-box;padding: 0 60rpx 0 40rpx;}
+.barc .input-sous{position: absolute;right: 30rpx;top: 20rpx;}
+
+.content{margin: 0 20rpx;}
+.title{text-align: center;overflow: hidden;}
+.title-in{position: relative;display: inline-block;padding: 0 50rpx;}
+.title image{vertical-align: middle;display: inline-block;}
+.title text{font-size: 30rpx;padding-right: 20rpx;vertical-align: middle;}
+.title-in::before,.title-in::after{content: '';position: absolute;width: 100%;left: -100%;height: 1px;background: #e6e6e6;top: 50%;}
+.title-in::before{content: '';left: auto;right: -100%;}
+
+
+/* 筛选小标题 */
+.subnav{position: absolute;left: 0;top: -100%;width: 100%;background:#f2f2f2;z-index: -1;opacity: 0;height: 100%;}
+.subnav.active{position: relative;top: 0;opacity: 1;transition: all 0.3s;}
+.subnav-in{width: 100%;font-size: 0;padding: 20rpx 0;text-align: center;}
+.subnav-in text{font-size: 24rpx;color: #999;display: inline-block;width: 16.66%;vertical-align: middle;}
+.subnav-in .subnav-text-act{color: #333333;}
+.subnav-in .shaixuan{width: 16.66%;display: inline-block;}
+.shaixuan-in{border-left: 1px solid #e6e6e6;}
+.subnav-in .shaixuan text{display: inline;margin-right: 6rpx;}
+.subnav-in .shaixuan image{vertical-align: middle;}
+
+
+/* 流布局内容块 */
+.shangpin{}
+#left, #right{width: 48%;margin: 0 1%;float: left;}
+#jpleft, #jpright{width: 48%;margin: 0 1%;float: left;}
+
+.shangpin-item{margin-bottom: 30rpx;position: relative;padding-left: 33rpx;}
+.shangpin-item .cebian{position: absolute;left: 0;top: 30%;}
+.shangpin-item .cebian image{}
+.spimg{box-shadow: 0 0 20rpx rgba(0,0,0,0.2);overflow: hidden;border-radius: 10rpx;position: relative;}
+.spimg>image{width: 100%;}
+.spimg>.hot{position: absolute;left: 0;top: 0;width: 88rpx;}
+.spinfo{padding: 10rpx;}
+.h2{font-size: 26rpx;}
+.sptype{padding: 10rpx 0;}
+.price{color: #ea1719;font-size: 26rpx;padding-right: 10px;}
+.yuanprice{color: #999;font-size: 16rpx;text-decoration:line-through;}
+.pay{color: #999;font-size: 20rpx;}
+.des image{margin-right: 6rpx;}
+.address{}
+.address image{vertical-align: middle;display: inline-block;}
+.address text{font-size: 20rpx;color: #ccc;vertical-align: middle;padding-left: 10rpx;}
+.address text.didian{float: right;}
