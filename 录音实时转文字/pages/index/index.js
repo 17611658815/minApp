@@ -1,8 +1,8 @@
 var plugin = requirePlugin("QCloudAIVoice");
 let manager = plugin.getRecordRecognitionManager();
-let appid = 1301526617;
-let secretid = 'AKID1rRoOm4obAUYOXNRDsLbileKn4D9BSxH';
-let secretkey = 'KPGwNYVIsBH9qHSREbnncIkdMxObaO3U';
+let appid = 130152****7;
+let secretid = 'AKID1r*****';
+let secretkey = 'KPGwNYVIsBH9qHS*****';
 let openConsole = false;
 plugin.setQCloudSecret(appid, secretid, secretkey, openConsole) //设置腾讯云账号信息，其中appid是数字，secret是字符串，
 var options = {
