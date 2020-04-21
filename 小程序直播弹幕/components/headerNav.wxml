@@ -1,0 +1,8 @@
+<view class='nav-wrap' style='height:{{height}}px;margin-bottom:{{height}}px'>
+    <view class="searchBox" style='height:{{barHeight}}px;position:absolute;top:{{navTop}}px;left:{{navLeft}}px ;'>
+         
+
+    </view>
+</view>
+
+ 

@@ -1,6 +1,4 @@
 
-
-
 <swiper vertical='true'  current="0" bindchange='onSlideChangeEnd'  style='height:{{Height}}px'>
   <block>
     <swiper-item wx:for="{{slider}}">

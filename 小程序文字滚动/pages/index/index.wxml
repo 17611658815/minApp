@@ -1,22 +1,21 @@
 <!-- 上下滚动 1 -->
 <view class='title'>效果一</view>
-  <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="1000">
+<swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="1000">
     <block wx:for="{{msgList}}">
-      <navigator url="/pages/index/index?title={{item.url}}" open-type="navigate">
-        <swiper-item>
-          <view class="swiper_item">{{item.title}}</view>
-        </swiper-item>
-      </navigator>
+        <navigator url="/pages/index/index?title={{item.url}}" open-type="navigate">
+            <swiper-item>
+                <view class="swiper_item">{{item.title}}</view>
+            </swiper-item>
+        </navigator>
     </block>
-  </swiper>
+</swiper>
 <!-- 滚动 2 -->
 <view class='title'>效果二</view>
 <view class="example">
-  <view class="marquee_box">
-    <view class="marquee_text" style="{{orientation}}:{{marqueeDistance2}}px;font-size: {{size}}px;">
-      <text>{{text}}</text>
-      <text wx:if="{{marquee2copy_status}}" style="margin-left:{{marquee2_margin}}px;">{{text}}</text>
+    <view class="marquee_box">
+        <view class="marquee_text" style="{{orientation}}:{{marqueeDistance2}}px;font-size: {{size}}px;">
+            <text>{{text}}</text>
+            <text wx:if="{{marquee2copy_status}}" style="margin-left:{{marquee2_margin}}px;">{{text}}</text>
+        </view>
     </view>
-  </view>
 </view>
-

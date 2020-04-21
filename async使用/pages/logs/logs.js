@@ -1,15 +1,14 @@
-//logs.js
-const util = require('../../utils/util.js')
-
 Page({
   data: {
-    logs: []
+    obj:{
+        name:"张三",
+        age:"26"
+    }
   },
   onLoad: function () {
     this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(log => {
-        return util.formatTime(new Date(log))
-      })
+        [`obj.name`]:'小李' 
     })
+      console.log(this.data.obj)
   }
 })

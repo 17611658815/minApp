@@ -49,16 +49,6 @@ Page({
     that.rotate()
     that.audioPlay()
   },
-
-  
-
-
-
-
-
-
-
- 
   onReady: function () {
     this.animation3 = wx.createAnimation({duration: 500, timingFunction: 'ease',})
     this.animation4 = wx.createAnimation({ duration: 500, timingFunction: 'ease', })

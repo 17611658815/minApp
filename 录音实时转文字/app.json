@@ -1,8 +1,7 @@
 {
     "pages": [
-            "pages/logs/logs",
-        "pages/index/index"
-   
+        "pages/index/index",
+        "pages/logs/logs"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -10,5 +9,12 @@
         "navigationBarTitleText": "WeChat",
         "navigationBarTextStyle": "black"
     },
+    "plugins": {
+        "QCloudAIVoice": {
+            "version": "1.2.0",
+            "provider": "wx3e17776051baf153"
+        }
+    },
+    "style": "v2",
     "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,50 @@
+.page-body-button {
+  margin-bottom: 30rpx;
+}
+.page-body{
+    position:fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+live-player {
+  width: 100%;
+  height: 100vh;
+}
+.player-msg{
+   display: flex;
+    position: absolute;
+    bottom: 30rpx;
+    left: 30rpx;
+}
+.player-msg input{
+    width: 300rpx;
+    height: 80rpx;
+    border-radius: 90rpx;
+    border: 2rpx solid #ffffff;
+    color: #ffffff;
+    background: rgba(255, 255,255, .5);
+}
+.player-content{
+    width: 300rpx;
+    height: 300rpx;
+    position: absolute;
+    bottom: 250rpx;
+    left: 30rpx;
+    /* background: rgba(255, 255,255, .5); */
+    color: rgba(255, 255,255, .5);
+    overflow-y: scroll 
+}
+input{
+    position: absolute;
+    bottom: 180rpx;
+    left: 30rpx;
+     width: 300rpx;
+    height: 50rpx;
+    border-radius: 90rpx;
+    border: 2rpx solid #ffffff;
+    color: #ffffff;
+    background: rgba(255, 255,255, .5);
+
+}

@@ -37,29 +37,29 @@ Page({
         loginModelHidden: !0
     },
     onLoad: function() {
-        var t = this, e = wx.getStorageSync("userInfo");
-        e && 0 != e.memberInfo.uid && "" != e.memberInfo ? (t.setData({
-            userId: e.memberInfo.uid
-        }), t.GetHelpExamineSetting()) : wx.getSetting({
-            success: function(e) {
-                0 == e.authSetting["scope.userInfo"] ? wx.showModal({
-                    title: "提示",
-                    content: "允许小程序获取您的用户信息后才可学习课程哦",
-                    showCancel: !1,
-                    success: function(e) {
-                        e.confirm && wx.openSetting({
-                            success: function(e) {
-                                1 == e.authSetting["scope.userInfo"] && (t.setData({
-                                    loginModelHidden: !1
-                                }), wx.removeStorageSync("userInfo"));
-                            }
-                        });
-                    }
-                }) : (wx.removeStorageSync("userInfo"), t.setData({
-                    loginModelHidden: !1
-                }));
-            }
-        }), wx.hideShareMenu();
+        // var t = this, e = wx.getStorageSync("userInfo");
+        // e && 0 != e.memberInfo.uid && "" != e.memberInfo ? (t.setData({
+        //     userId: e.memberInfo.uid
+        // }), t.GetHelpExamineSetting()) : wx.getSetting({
+        //     success: function(e) {
+        //         0 == e.authSetting["scope.userInfo"] ? wx.showModal({
+        //             title: "提示",
+        //             content: "允许小程序获取您的用户信息后才可学习课程哦",
+        //             showCancel: !1,
+        //             success: function(e) {
+        //                 e.confirm && wx.openSetting({
+        //                     success: function(e) {
+        //                         1 == e.authSetting["scope.userInfo"] && (t.setData({
+        //                             loginModelHidden: !1
+        //                         }), wx.removeStorageSync("userInfo"));
+        //                     }
+        //                 });
+        //             }
+        //         }) : (wx.removeStorageSync("userInfo"), t.setData({
+        //             loginModelHidden: !1
+        //         }));
+        //     }
+        // }), wx.hideShareMenu();
     },
     updateUserInfo: function(e) {
         var t = this;

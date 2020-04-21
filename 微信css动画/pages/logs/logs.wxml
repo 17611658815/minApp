@@ -1,6 +1,146 @@
-<!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<view class='emergency-shade' catchtap='selecEmergency' catchtouchmove='ture'></view>
+<view class="{{emShow ? 'emergency-contentShow':'emergency-contentHide'}}">
+<view style="width:100%">
+    <view class='home-content-search' style="background:#F3F3F3">
+        <image class='icon_search' src='../../images/icon_5.png'></image>
+        <view class="searchInput" type="text" bindtap='onbindfocus2' placeholder="您的车有什么问题">您的车有什么问题</view>
+    </view>
+    <view class="emergency-tag width90 fontSize-26 padding30">
+        <view>周边明星店铺</view>
+        <view>美孚润滑油</view>
+        <view>米其林轮胎</view>
+        <view>风帆电瓶</view>
+    </view>
+    <swiper class="swiper">
+        <swiper-item>
+            <image style="width:100%;height:100%;" mode="scaleToFill" src='https://img.dodo.wiki/app/img12.png'></image>
+        </swiper-item>
+    </swiper>
+    <view class="nav1List">
+        <!--  <view class="dpfC">
+                <view class="bg-img" style="background-image: url(https://img.dodo.wiki/app/nav1.png)" ></view>
+                <view class="marginTop10">保养</view>
+            </view>
+            <view class="dpfC">
+            <view class="bg-img" style="background-image: url(https://img.dodo.wiki/app/nav2.png)" ></view>
+                <view class="marginTop10">易耗</view>
+            </view>
+            <view class="dpfC">
+               <view class="bg-img" style="background-image: url(https://img.dodo.wiki/app/nav3.png)" ></view>
+                <view class="marginTop10">维修</view>
+            </view>
+            <view class="dpfC">
+               <view class="bg-img" style="background-image: url(https://img.dodo.wiki/app/nav4.png)" ></view>
+                <view class="marginTop10">事故</view>
+            </view>
+            <view class="dpfC">
+                <view class="bg-img" style="background-image: url(https://img.dodo.wiki/app/nav5.png)" ></view>
+                <view class="marginTop10">服务</view>
+            </view> -->
+    </view>
+    <view class="nav2List">
+        <!--  <view class="dpfC">
+                <image src='https://img.dodo.wiki/app/nav6.png'></image>
+                <view class="marginTop10">养护美容</view>
+            </view>
+            <view class="dpfC">
+                <image src='https://img.dodo.wiki/app/nav7.png'></image>
+                <view class="marginTop10">防盗安全</view>
+            </view>
+            <view class="dpfC">
+                <image src='https://img.dodo.wiki/app/nav8.png'></image>
+                <view class="marginTop10">车载影音</view>
+            </view>
+            <view class="dpfC">
+                <image src='https://img.dodo.wiki/app/nav9.png'></image>
+                <view class="marginTop10">内饰香水</view>
+            </view>
+            <view class="dpfC">
+                <image src='https://img.dodo.wiki/app/nav10.png'></image>
+                <view class="marginTop10">外饰功能</view>
+            </view>
+            <view class="dpfC">
+                <image src='https://img.dodo.wiki/app/nav11.png'></image>
+                <view class="marginTop10">车用电器</view>
+            </view>
+            <view class="dpfC">
+                <image src='https://img.dodo.wiki/app/nav12.png'></image>
+                <view class="marginTop10">户外用品</view>
+            </view>
+            <view class="dpfC">
+                <image src='https://img.dodo.wiki/app/nav13.png'></image>
+                <view class="marginTop10">改装用品</view>
+            </view>
+            <view class="dpfC">
+                <image src='https://img.dodo.wiki/app/nav14.png'></image>
+                <view class="marginTop10">保险加油</view>
+            </view>
+            <view class="dpfC">
+                <image src='https://img.dodo.wiki/app/nav15.png'></image>
+                <view class="marginTop10">全部服务</view>
+            </view> -->
+    </view>
+    <!--  <view class="Emergency_title">
+            <view>周边技师</view>
+            <image src="https://img.dodo.wiki/app/img13.png"></image>
+        </view>
+        <view class="jishi_box">
+            <view class="dpfC">
+                <image src="https://img.dodo.wiki/app/img14.png"></image>
+                <view> 免费咨询车疑惑</view>
+            </view>
+            <view class="dpfC">
+                <image src="https://img.dodo.wiki/app/img15.png"></image>
+                <view> 绑定成专职服务</view>
+            </view>
+        </view>
+         <view class="Emergency_goodsBox">
+            <view class="dpfC">
+                <view class="width100 fontWeight5">正规商品</view>
+                <view class="width100 fontSize-22 color10">平台严格审核店铺，确保品质</view>
+                <image src="https://img.dodo.wiki/app/img16.png"></image>
+            </view>
+            <view class="dpfC">
+                <view class="width100 fontWeight5">明星店铺</view>
+                <view class="width100 fontSize-22 color10">经用户体验后如实好评的店铺</view>
+                <image src="https://img.dodo.wiki/app/img17.png"></image>
+            </view>
+            <view class="dpfC">
+                <view class="width100 fontWeight5">好口碑机油</view>
+                <view class="width100 fontSize-22 color10">平台依据用户好评</view>
+                <image src="https://img.dodo.wiki/app/img18.png"></image>
+            </view>
+            <view class="dpfC">
+                <view class="width100 fontWeight5">品质可靠的轮胎</view>
+                <view class="width100 fontSize-22 color10">经过多用户好评，推荐品牌</view>
+                <image src="https://img.dodo.wiki/app/img19.png"></image>
+            </view>
+        </view>
+          <view class="Emergency_goodsBox">
+            <view class="dpfC">
+                <view class="width100 fontWeight5">正规商品</view>
+                <view class="width100 fontSize-22 color10">平台严格审核店铺，确保品质</view>
+                <image src="https://img.dodo.wiki/app/img16.png"></image>
+            </view>
+            <view class="dpfC">
+                <view class="width100 fontWeight5">明星店铺</view>
+                <view class="width100 fontSize-22 color10">经用户体验后如实好评的店铺</view>
+                <image src="https://img.dodo.wiki/app/img17.png"></image>
+            </view>
+            <view class="dpfC">
+                <view class="width100 fontWeight5">好口碑机油</view>
+                <view class="width100 fontSize-22 color10">平台依据用户好评</view>
+                <image src="https://img.dodo.wiki/app/img18.png"></image>
+            </view>
+            <view class="dpfC">
+                <view class="width100 fontWeight5">品质可靠的轮胎</view>
+                <view class="width100 fontSize-22 color10">经过多用户好评，推荐品牌</view>
+                <image src="https://img.dodo.wiki/app/img19.png"></image>
+            </view>
+        </view>
+        <view class="Emergency_shopTitle">
+               <view>附近店铺</view>
+               <view>用户好评</view>
+        </view>   -->
+        </view>
 </view>
