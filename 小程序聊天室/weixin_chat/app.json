@@ -1,0 +1,12 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/chat/chat"
+    ],
+    "window": {
+        "navigationBarTitleText": "首页",
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "default"
+    },
+    "sitemapLocation": "sitemap.json"
+}

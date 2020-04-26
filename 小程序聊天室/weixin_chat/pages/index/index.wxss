@@ -1,0 +1,89 @@
+/**index.wxss**/
+
+.userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
+
+.userinfo-nickname {
+    color: #aaa;
+}
+
+.chat {
+    font-size: 35rpx;
+    margin: 40rpx 0;
+}
+
+
+
+.show {
+     width: 500rpx;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: yellow;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    animation: myshow 0.5s;
+}
+.hide {
+    width: 500rpx;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: yellow;
+    position: fixed;
+    bottom: 0;
+    left: -500rpx;
+    animation: myhide 0.5s;
+}
+@keyframes myshow {
+    0% {
+        left: -500rpx;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes myhide {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -500rpx;
+    }
+}
+
+.testLayout{
+    width: 300rpx;
+    height: 60rpx;
+    background: rgba(0, 0, 0, .5);
+    margin: auto;
+    position: relative;
+}
+.testLayout::before {
+    content: '';
+    position: absolute;
+    left: -50rpx;
+    top: 0;
+    bottom: 0;
+    width:0;
+    height:0;
+    border-top:30rpx solid transparent;
+    border-bottom:30rpx solid transparent;
+    border-right:50rpx solid rgba(0, 0, 0, .5);
+  }
