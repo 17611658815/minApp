@@ -8,7 +8,7 @@
     "start": "node %NODE_DEBUG_OPTION% server.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "element-ui": "^2.6.1",
     "lib-flexible": "^0.3.2",
     "mint-ui": "^2.2.13",
